@@ -8,6 +8,7 @@
 bin/
 tmp/
 node_modules/
+.sass-cache/
 *.tmp
 *.bak
 *.swp
