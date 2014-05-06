@@ -1,2 +1,7 @@
+// External WOOCSS libs
 @import "libs/sassanimation/sassanimation";
 @import "libs/sassbuttons/sassbuttons";
+
+// Base WOOCSS
+@import "components/components";
+@import "functions/functions";
