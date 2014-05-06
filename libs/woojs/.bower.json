@@ -1,11 +1,11 @@
 {
   "name": "woojs",
   "homepage": "https://github.com/jimmyjamieson/woojs",
-  "_release": "250d6ed813",
+  "_release": "ab2fbeb585",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "250d6ed8138eb5401519fe9b12a67ffa7ae33111"
+    "commit": "ab2fbeb5854ee05d402216556216af30d5b483a4"
   },
   "_source": "https://github.com/jimmyjamieson/woojs.git",
   "_target": "*",

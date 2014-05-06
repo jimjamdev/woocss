@@ -5,9 +5,13 @@
 @import "breakpoint";
 
 // External woocss libs
-@import "libs/sassanimation/sassfunctions";
+@import "libs/sassfunctions/sassfunctions";
 @import "libs/sassanimation/sassanimation";
 @import "libs/sassbuttons/sassbuttons";
 
-// Base WOOCSS
+// Base
+@import "reset";
+@import "breakpoints";
+
+// Components
 @import "components/components";

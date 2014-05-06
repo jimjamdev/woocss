@@ -1,11 +1,11 @@
 {
   "name": "sassfunctions",
   "homepage": "https://github.com/jimmyjamieson/sassfunctions",
-  "_release": "c3f6d663a4",
+  "_release": "a92e23c4f2",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c3f6d663a4acf7eb1b064f4f9dff64008c68df26"
+    "commit": "a92e23c4f22c417c0de8314bdb3b5cf36a565cc6"
   },
   "_source": "https://github.com/jimmyjamieson/sassfunctions.git",
   "_target": "*",
