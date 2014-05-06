@@ -15,11 +15,13 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "libs",
     "test",
     "tests"
   ],
   "dependencies": {
       "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
-      "sassbuttons": "https://github.com/jimmyjamieson/sassbuttons.git"
+      "sassbuttons": "https://github.com/jimmyjamieson/sassbuttons.git",
+      "woojs": "https://github.com/jimmyjamieson/woojs.git"
   }
 }

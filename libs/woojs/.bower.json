@@ -1,0 +1,13 @@
+{
+  "name": "woojs",
+  "homepage": "https://github.com/jimmyjamieson/woojs",
+  "_release": "250d6ed813",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "250d6ed8138eb5401519fe9b12a67ffa7ae33111"
+  },
+  "_source": "https://github.com/jimmyjamieson/woojs.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/jimmyjamieson/woojs.git"
+}
