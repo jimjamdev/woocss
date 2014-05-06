@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-      "sassanimation": "*",
-      "sassbuttons": "*"
+      "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
+      "sassbuttons": "https://github.com/jimmyjamieson/sassbuttons.git"
   }
 }

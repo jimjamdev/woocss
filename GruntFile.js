@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['GruntFile.js', '**/*.scss', 'core/**/*', 'core/components/**/*'],
-                tasks: ['compass', 'cssmin']
+                tasks: ['compass']
             },
             js: {
                 files: ['GruntFile.js', 'core/components/**/*.js'],
