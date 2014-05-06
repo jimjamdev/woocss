@@ -1,0 +1,25 @@
+{
+  "name": "WOOCSS",
+  "version": "0.1.0",
+  "authors": [
+    "Ian Jamieson <cogocreative@gmail.com>"
+  ],
+  "description": "WooCss Packages",
+  "main": "woocss.css",
+  "keywords": [
+    "ec"
+  ],
+  "license": "MIT",
+  "homepage": "www.woocss.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "sassanimation": "*",
+      "sassbuttons": "*"
+  }
+}

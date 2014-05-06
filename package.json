@@ -1,0 +1,13 @@
+{
+  "name": "BaseGrunt",
+  "version": "0.1.0",
+  "author": "Ian Jamieson",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "matchdep": "*"
+  }
+}
