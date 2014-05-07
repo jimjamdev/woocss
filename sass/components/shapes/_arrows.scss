@@ -1,13 +1,11 @@
 // --------------------------------------------------------
-// arrows
+// Arrows
 // --------------------------------------------------------
-// $direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
-// $color: hex, rgb or rbga
-// $size: px or em
-// @example
-// .element{
-//     @include arrow(top, #000, 50px);   
-// }
+//
+//  @include arrow(top, red, 50px); 
+//
+// --------------------------------------------------------
+
 @mixin arrow($direction, $color, $size){
     display: block;
     height: 0;
