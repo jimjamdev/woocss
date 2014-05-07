@@ -4,13 +4,15 @@
 @import "susy";
 @import "breakpoint";
 
+// Reset first 
+@import "reset";
+
 // External woocss libs
 @import "libs/sassfunctions/sassfunctions";
 @import "libs/sassanimation/sassanimation";
 @import "libs/sassbuttons/sassbuttons";
 
 // Base
-@import "reset";
 @import "breakpoints";
 
 // Components
