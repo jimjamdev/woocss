@@ -23,3 +23,4 @@ $danger: $red;
 
 $base-color: $red !default;
 $alt-color: complement($base-color) !default;
+//$alt-color: invert($base-color) !default;
