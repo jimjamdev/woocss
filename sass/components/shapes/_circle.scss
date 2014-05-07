@@ -1,0 +1,10 @@
+// --------------------------------------------------------
+// Circles
+// --------------------------------------------------------
+
+@mixin circle($color, $width, $height){
+    width: $width;
+    height: $height;
+    background: $color;
+    border-radius: ($width / 2) / ($height / 2);
+}
