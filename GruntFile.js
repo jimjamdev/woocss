@@ -43,13 +43,13 @@ module.exports = function(grunt) {
         // == Watch List =============================================
 
         watch: {
-            files: ['GruntFile.js', 'html/*', 'css/*', 'img/*', 'js/*', 'img/*'],
+            files: ['GruntFile.js', 'html/*', '/*', 'img/*', 'js/*', 'img/*'],
             options: {
                 livereload: true,
                 spawn: false,
             },
             sass: {
-                files: ['GruntFile.js', '**/*.scss', 'core/**/*', 'core/components/**/*'],
+                files: ['GruntFile.js', '**/*.scss', 'core/**/*', 'sass/components/**/*'],
                 tasks: ['compass']
             },
             js: {
