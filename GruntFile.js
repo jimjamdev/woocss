@@ -19,6 +19,18 @@ module.exports = function(grunt) {
             }
         },
 
+        // Use once lib-sass has been updated to work with @extend and %placeholder    
+        /*sass: {                                 // task
+            dist: {   
+            options: {
+                outputStyle: 'compressed'
+            },                          // target
+                files: {                        // dictionary of files
+                    'woocss.css': 'woocss.scss'     // 'destination': 'source'
+                }
+            }
+        },*/ 
+
         // Merge Javascript Files
         concat: {
             js: {
@@ -43,17 +55,17 @@ module.exports = function(grunt) {
         // == Watch List =============================================
 
         watch: {
-            files: ['GruntFile.js', 'html/*', '/*', 'img/*', 'js/*', 'img/*'],
+            files: ['GruntFile.js', 'docs/*', '/*', 'img/*', 'js/*'],
             options: {
                 livereload: true,
                 spawn: false,
             },
             sass: {
-                files: ['GruntFile.js', '**/*.scss', 'core/**/*', 'sass/components/**/*'],
-                tasks: ['compass']
+                files: ['GruntFile.js', '**/*.scss', 'libs/**/*', 'sass/**/*'],
+                tasks: ['sass']
             },
             js: {
-                files: ['GruntFile.js', 'core/components/**/*.js'],
+                files: ['GruntFile.js', 'libs/woojs/**/*.js', 'js/**/*.js'],
                 tasks: ['concat', 'uglify']
             },
 
