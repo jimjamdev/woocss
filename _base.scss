@@ -6,3 +6,186 @@
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+
+// Defaults
+
+$default-animation-duration: 1s !default;
+$default-animation-timing-function: ease !default;
+$default-animation-fill-mode: both !default;
+$default-animation-iterations: 1 !default;
+$default-animation-direction: normal !default;
+$default-animation-play-state: running !default;
+$default-animation-delay: 2s !default;
+
+// Standard Animation Properties
+
+@mixin animation-name($name: '') {
+    @if $name != '' {
+        @include experimental(animation-name, $name,
+            -webkit,
+            -moz,
+            -o,
+            not -ms,
+            official);
+    } @else {
+        @warn "Your animation needs a name!";
+    }
+}
+
+@mixin animation-duration($duration: $default-animation-duration) {
+    @include experimental(animation-duration, $duration,
+        -webkit,
+        -moz,
+        -o,
+        not
+        -ms,
+        official);
+}
+
+@mixin animation-timing-function($timing: $default-animation-timing-function) {
+    @include experimental(animation-timing-function, $timing,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+@mixin animation-fill-mode($mode: $default-animation-fill-mode) {
+    @include experimental(animation-fill-mode, $mode,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+@mixin animation-iteration-count($count: $default-animation-iterations) {
+    @include experimental(animation-iteration-count, $count,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+@mixin animation-direction($direction: $default-animation-direction) {
+    @include experimental(animation-direction, $direction,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+@mixin animation-play-state($state: $default-animation-play-state) {
+    @include experimental(animation-play-state, $state,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+@mixin animation-delay($delay: $default-animation-delay) {
+    @include experimental(animation-delay, $delay,
+        -webkit,
+        -moz,
+        -o,
+        not -ms,
+        official);
+}
+
+// Keyframes
+
+@mixin keyframes($name) {
+    @if $experimental-support-for-webkit {
+        @-webkit-keyframes $name {
+            @content;
+        }
+    }
+    @if $experimental-support-for-mozilla {
+        @-moz-keyframes $name {
+            @content;
+        }
+    }
+    @if $experimental-support-for-opera {
+        @-o-keyframes $name {
+            @content;
+        }
+    }
+    @keyframes $name {
+        @content;
+    }
+}
+
+@mixin webkit-keyframes($name) {
+    @if $experimental-support-for-webkit {
+        @-webkit-keyframes $name {
+            @content;
+        }
+    }
+}
+
+@mixin moz-keyframes($name) {
+    @if $experimental-support-for-mozilla {
+        @-moz-keyframes $name {
+            @content;
+        }
+    }
+}
+
+@mixin o-keyframes($name) {
+    @if $experimental-support-for-opera {
+        @-opera-keyframes $name {
+            @content;
+        }
+    }
+}
+
+@mixin official-keyframes($name) {
+    @keyframes $name {
+        @content
+    }
+}
+
+// Default animation properties
+
+%defaultAnimation {
+    @include animation-duration;
+    @include animation-fill-mode;
+    -webkit-backface-visibility: visible !important;
+       -moz-backface-visibility: visible !important;
+         -o-backface-visibility: visible !important;
+            backface-visibility: visible !important;
+}
+
+// All-in-one mixin
+
+@mixin animation(
+    $name: null,
+    $duration: null,
+    $timing: null,
+    $iterations: null,
+    $delay: null,
+    $fill: null,
+    $direction: null,
+    $state: null) {
+
+    @if $name != null {
+        %#{$name} {
+            @extend %defaultAnimation;
+            @include animation-name(unquote($name));
+            @if $duration != null { @include animation-duration($duration); }
+            @if $timing != null { @include animation-timing-function($timing); }
+            @if $iterations != null { @include animation-iteration-count($iterations); }
+            @if $delay != null { @include animation-delay($delay); }
+            @if $fill != null { @include animation-fill-mode($fill); }
+            @if $direction != null { @include animation-direction($direction); }
+            @if $state != null { @include animation-play-state($state); }
+        }
+    } @else {
+        @warn "Your animation needs a name!"
+    }
+
+}
