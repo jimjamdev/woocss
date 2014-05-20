@@ -1,4 +1,6 @@
 woocss
 ======
 
-A Sass framework that I use daily available to the public. Feel free to make suggestions orcheck out the demo at woocss.com
+woocss is a framework built for web designers and front-end developers who know the basics, and would like a lightweight starter framework in which to base your projects.
+
+
