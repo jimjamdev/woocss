@@ -21,122 +21,81 @@ $default-animation-delay: 2s !default;
 
 @mixin animation-name($name: '') {
     @if $name != '' {
-        @include experimental(animation-name, $name,
-            -webkit,
-            -moz,
-            -o,
-            not -ms,
-            official);
+        @include experimental(animation-name, $name);
     } @else {
         @warn "Your animation needs a name!";
     }
 }
 
 @mixin animation-duration($duration: $default-animation-duration) {
-    @include experimental(animation-duration, $duration,
-        -webkit,
-        -moz,
-        -o,
-        not
-        -ms,
-        official);
+    @include experimental(animation-duration, $duration);
 }
 
 @mixin animation-timing-function($timing: $default-animation-timing-function) {
-    @include experimental(animation-timing-function, $timing,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-timing-function, $timing);
 }
 
 @mixin animation-fill-mode($mode: $default-animation-fill-mode) {
-    @include experimental(animation-fill-mode, $mode,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-fill-mode, $mode);
 }
 
 @mixin animation-iteration-count($count: $default-animation-iterations) {
-    @include experimental(animation-iteration-count, $count,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-iteration-count, $count);
 }
 
 @mixin animation-direction($direction: $default-animation-direction) {
-    @include experimental(animation-direction, $direction,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-direction, $direction);
 }
 
 @mixin animation-play-state($state: $default-animation-play-state) {
-    @include experimental(animation-play-state, $state,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-play-state, $state);
 }
 
 @mixin animation-delay($delay: $default-animation-delay) {
-    @include experimental(animation-delay, $delay,
-        -webkit,
-        -moz,
-        -o,
-        not -ms,
-        official);
+    @include experimental(animation-delay, $delay);
 }
 
 // Keyframes
 
 @mixin keyframes($name) {
-    @if $experimental-support-for-webkit {
+   
         @-webkit-keyframes $name {
             @content;
         }
-    }
-    @if $experimental-support-for-mozilla {
+    
+   
         @-moz-keyframes $name {
             @content;
         }
-    }
-    @if $experimental-support-for-opera {
+    
+    
         @-o-keyframes $name {
             @content;
         }
-    }
+    
     @keyframes $name {
         @content;
     }
 }
 
 @mixin webkit-keyframes($name) {
-    @if $experimental-support-for-webkit {
+   
         @-webkit-keyframes $name {
             @content;
         }
-    }
+    
 }
 
 @mixin moz-keyframes($name) {
-    @if $experimental-support-for-mozilla {
+    
         @-moz-keyframes $name {
             @content;
         }
-    }
+    
 }
 
 @mixin o-keyframes($name) {
-    @if $experimental-support-for-opera {
+ 
         @-opera-keyframes $name {
             @content;
         }

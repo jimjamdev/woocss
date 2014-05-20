@@ -1,0 +1,93 @@
+/*
+Syntax error: Undefined mixin 'animation'.
+        on line 3 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss, in `animation'
+        from line 3 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss
+        from line 1 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fade.scss
+        from line 1 of C:/Users/Ian/Dropbox/Web/Clients/COGO/lib/sassanimation/sassanimation.scss
+
+1: C:/Users/Ian/Dropbox/Web/Clients/COGO/lib/sassanimation/sassanimation.scss
+
+Backtrace:
+C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss:3:in `animation'
+C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss:3
+C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fade.scss:1
+C:/Users/Ian/Dropbox/Web/Clients/COGO/lib/sassanimation/sassanimation.scss:1
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:320:in `block in visit_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:318:in `visit_mixin'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:151:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:147:in `block (2 levels) in compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:133:in `timed'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:146:in `block in compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/logger.rb:46:in `red'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:145:in `compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:125:in `compile_if_required'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:110:in `block (2 levels) in run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:108:in `each'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:108:in `block in run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:133:in `timed'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/compiler.rb:107:in `run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/watcher/compiler.rb:24:in `compile'
+C:/Ruby200-x64/lib/ruby/2.0.0/forwardable.rb:171:in `compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/commands/watch_project.rb:47:in `perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/bin/compass:30:in `block in <top (required)>'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/bin/compass:44:in `call'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.13/bin/compass:44:in `<top (required)>'
+C:/Ruby200-x64/bin/compass:23:in `load'
+C:/Ruby200-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'animation'.\A         on line 3 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss, in `animation'\A         from line 3 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fadein.scss\A         from line 1 of C:\Users\Ian\Dropbox\Web\Clients\COGO\lib\sassanimation\fade\_fade.scss\A         from line 1 of C:/Users/Ian/Dropbox/Web/Clients/COGO/lib/sassanimation/sassanimation.scss\A \A 1: C:/Users/Ian/Dropbox/Web/Clients/COGO/lib/sassanimation/sassanimation.scss"; }
