@@ -19,132 +19,43 @@ $default-animation-delay: 2s !default;
 
 // Standard Animation Properties
 
-@mixin animation-name($name: '') {
-    @if $name != '' {
-        @include experimental(animation-name, $name);
-    } @else {
-        @warn "Your animation needs a name!";
+@mixin keyframe ($animation) {
+    @-webkit-keyframes #{$animation} {
+        @content;
     }
-}
-
-@mixin animation-duration($duration: $default-animation-duration) {
-    @include experimental(animation-duration, $duration);
-}
-
-@mixin animation-timing-function($timing: $default-animation-timing-function) {
-    @include experimental(animation-timing-function, $timing);
-}
-
-@mixin animation-fill-mode($mode: $default-animation-fill-mode) {
-    @include experimental(animation-fill-mode, $mode);
-}
-
-@mixin animation-iteration-count($count: $default-animation-iterations) {
-    @include experimental(animation-iteration-count, $count);
-}
-
-@mixin animation-direction($direction: $default-animation-direction) {
-    @include experimental(animation-direction, $direction);
-}
-
-@mixin animation-play-state($state: $default-animation-play-state) {
-    @include experimental(animation-play-state, $state);
-}
-
-@mixin animation-delay($delay: $default-animation-delay) {
-    @include experimental(animation-delay, $delay);
-}
-
-// Keyframes
-
-@mixin keyframes($name) {
-   
-        @-webkit-keyframes $name {
-            @content;
-        }
-    
-   
-        @-moz-keyframes $name {
-            @content;
-        }
-    
-    
-        @-o-keyframes $name {
-            @content;
-        }
-    
-    @keyframes $name {
+ 
+    @-moz-keyframes #{$animation} {
+        @content;
+    }
+ 
+    @-o-keyframes #{$animation} {
+        @content;
+    }
+ 
+    @keyframes #{$animation} {
         @content;
     }
 }
 
-@mixin webkit-keyframes($name) {
-   
-        @-webkit-keyframes $name {
-            @content;
-        }
-    
-}
 
-@mixin moz-keyframes($name) {
-    
-        @-moz-keyframes $name {
-            @content;
-        }
-    
-}
-
-@mixin o-keyframes($name) {
+@mixin animation ($default-animation-delay, $default-animation-duration, $animation) {
+    -webkit-animation-delay: $default-animation-delay;
+    -webkit-animation-duration: $default-animation-duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
  
-        @-opera-keyframes $name {
-            @content;
-        }
-    }
-}
-
-@mixin official-keyframes($name) {
-    @keyframes $name {
-        @content
-    }
-}
-
-// Default animation properties
-
-%defaultAnimation {
-    @include animation-duration;
-    @include animation-fill-mode;
-    -webkit-backface-visibility: visible !important;
-       -moz-backface-visibility: visible !important;
-         -o-backface-visibility: visible !important;
-            backface-visibility: visible !important;
-}
-
-// All-in-one mixin
-
-@mixin animation(
-    $name: null,
-    $duration: null,
-    $timing: null,
-    $iterations: null,
-    $delay: null,
-    $fill: null,
-    $direction: null,
-    $state: null) {
-
-    @if $name != null {
-        %#{$name} {
-            @extend %defaultAnimation;
-            @include animation-name(unquote($name));
-            @if $duration != null { @include animation-duration($duration); }
-            @if $timing != null { @include animation-timing-function($timing); }
-            @if $iterations != null { @include animation-iteration-count($iterations); }
-            @if $delay != null { @include animation-delay($delay); }
-            @if $fill != null { @include animation-fill-mode($fill); }
-            @if $direction != null { @include animation-direction($direction); }
-            @if $state != null { @include animation-play-state($state); }
-        }
-    } @else {
-        @warn "Your animation needs a name!"
-    }
-
+    -moz-animation-delay: $default-animation-delay;
+    -moz-animation-duration: $default-animation-duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+ 
+    -o-animation-delay: $default-animation-delay;
+    -o-animation-duration: $default-animation-duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+ 
+    animation-delay: $default-animation-delay;
+    animation-duration: $default-animation-duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
