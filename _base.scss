@@ -17,10 +17,10 @@ $default-animation-direction: normal !default;
 $default-animation-play-state: running !default;
 $default-animation-delay: 2s !default;
 
-// Standard Animation Properties
+// Standard Keyframe Properties
 
 @mixin keyframe ($animation) {
-    @-webkit-keyframes #{$animation} {
+    @-webkit-keyframes #{$animation} { 
         @content;
     }
  
@@ -37,8 +37,9 @@ $default-animation-delay: 2s !default;
     }
 }
 
+// Standard Animation properties
 
-@mixin animation ($default-animation-delay, $default-animation-duration, $animation) {
+@mixin animation ($animation, $default-animation-delay, $default-animation-duration) {
     -webkit-animation-delay: $default-animation-delay;
     -webkit-animation-duration: $default-animation-duration;
     -webkit-animation-name: $animation;

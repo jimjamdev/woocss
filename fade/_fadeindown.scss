@@ -1,18 +1,18 @@
 // Fade In Down
-
-@include keyframe(fadeInDown) {
-       0% {
-        opacity: 0;
-        -webkit-transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
+%fadeInDownKeyframes {
+    @include keyframe(fadeInDown) {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
     }
 }
 
-
 %fadeInDown {
-    @include animation(10s, 5s, fadeInDown);
+    @extend %fadeInDownKeyframes;
+    @include animation(fadeInDown, 1s, 1s);
 }
