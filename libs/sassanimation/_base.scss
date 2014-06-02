@@ -6,3 +6,56 @@
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+
+// Defaults
+
+$default-animation-duration: 1s !default;
+$default-animation-timing-function: ease !default;
+$default-animation-fill-mode: both !default;
+$default-animation-iterations: 1 !default;
+$default-animation-direction: normal !default;
+$default-animation-play-state: running !default;
+$default-animation-delay: 2s !default;
+
+// Standard Animation Properties
+
+@mixin keyframe ($animation) {
+    @-webkit-keyframes #{$animation} {
+        @content;
+    }
+ 
+    @-moz-keyframes #{$animation} {
+        @content;
+    }
+ 
+    @-o-keyframes #{$animation} {
+        @content;
+    }
+ 
+    @keyframes #{$animation} {
+        @content;
+    }
+}
+
+
+@mixin animation ($default-animation-delay, $default-animation-duration, $animation) {
+    -webkit-animation-delay: $default-animation-delay;
+    -webkit-animation-duration: $default-animation-duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+ 
+    -moz-animation-delay: $default-animation-delay;
+    -moz-animation-duration: $default-animation-duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+ 
+    -o-animation-delay: $default-animation-delay;
+    -o-animation-duration: $default-animation-duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+ 
+    animation-delay: $default-animation-delay;
+    animation-duration: $default-animation-duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}

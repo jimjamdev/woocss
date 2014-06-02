@@ -1,0 +1,52 @@
+@mixin menu {
+	.block__sub-menu {
+    @extend %clearfix;
+    background: $orange;
+    //min-height: 50px;
+    .container {
+        position: relative;
+    }
+    ul, li {
+        @extend %reset-list;
+    }
+    .sub-menu {
+        ul, li {
+            display: inline-block;
+            float: left;
+            position: relative;
+        }
+
+        li.has-dropdown:hover {
+            & .drop-down-menu {
+                display: block;
+                opacity: 1;
+            }
+        }
+        a {
+            display: block;
+            padding: 1em;
+            color: $white;
+            text-decoration: none;
+            height: 55px;
+            &:hover {
+                background: rgba($white, 0.1);
+            }
+        }
+        .drop-down-menu {
+        	position: absolute;
+        	top: 55px;
+        	left:0;
+        	min-width: 200px;
+        	
+        	display: none;
+            z-index: 999;
+            
+            background: $orange;
+            
+            & li {
+            	width: 100%;
+            }
+        }
+    }
+}
+}
