@@ -1,5 +1,5 @@
 @mixin menu {
-	.block__sub-menu {
+.block__sub-menu {
     @extend %clearfix;
     background: $orange;
     //min-height: 50px;
@@ -10,42 +10,97 @@
         @extend %reset-list;
     }
     .sub-menu {
-        ul, li {
-            display: inline-block;
-            float: left;
-            position: relative;
-        }
-
-        li.has-dropdown:hover {
-            & .drop-down-menu {
-                display: block;
-                opacity: 1;
-            }
-        }
+        height: 55px;
+        // Default link colors
         a {
             display: block;
             padding: 1em;
             color: $white;
             text-decoration: none;
             height: 55px;
-            &:hover {
-                background: rgba($white, 0.1);
+        }
+        // Default hover
+        li {
+            position: relative;
+            @extend %animate;
+            display: block;
+            &:hover > {
+                a {
+                    background: rgba($white, 0.1);
+                }
             }
         }
-        .drop-down-menu {
-        	position: absolute;
-        	top: 55px;
-        	left:0;
-        	min-width: 200px;
-        	
-        	display: none;
-            z-index: 999;
-            
-            background: $orange;
-            
-            & li {
-            	width: 100%;
+        // if has dropdown
+        li.has-dropdown {
+            &.wide {
+                position: static;
+                .drop-down-menu {
+                    min-width: 100%;
+                    width: 100%;
+                }
             }
+            &:hover {
+                .drop-down-menu {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+        // Dropdown menu styles
+        .drop-down-menu {
+            position: absolute;
+            top: 55px;
+            left: 0;
+            min-width: 200px;
+            display: none;
+            z-index: 999;
+            background: $white;
+            border: solid 1px $gray-light;
+            a {
+                padding: 0.5em;
+                //height: 40px;
+                //line-height: 30px; 
+                color: $orange;
+            }
+            .parent {
+                a {
+                    color: $gray-darker;
+                    background: $gray;
+                }
+            }
+            li {
+                @extend %animate;
+                display: block;
+                padding: 0;
+                width: 100%;
+                background: $white;
+                &:hover > {
+                    a {
+                        background: lighten($gray, 10%);
+                        background: rgba($gray, 0.5);
+                    }
+                }
+            }
+        }
+        select {
+            border: solid 7px $orange;
+        }
+    }
+}
+
+// Mobile select tweek
+
+.block__sub-menu ul.sub-menu li {
+    display: none;
+}
+
+.block__sub-menu ul.sub-menu {
+    @include desktop {
+        li {
+            display: inline-block;
+        }
+        select {
+            display: none;
         }
     }
 }
