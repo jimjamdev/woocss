@@ -1,6 +1,6 @@
 // Converts PX to Rem
 
-@mixin font-size($size: $base-font-size) {
+@mixin rem($size: $base-font-size) {
   font-size: ($size * 10) + px;
   font-size: $size + rem;
 }
