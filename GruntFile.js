@@ -11,16 +11,6 @@ module.exports = function(grunt) {
         // == Task List ==============================================
 
 
-
-        /*sass: {
-            build: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
-            }
-        },*/
-        
         sass: {                                    // task
             production: {     
                 options: {                 // Target options
@@ -81,20 +71,14 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['GruntFile.js', '**/*.scss', 'sass/**/*', 'sass/modules/**/*'],
-                tasks: ['sass'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['sass']
             },
             js: {
                 files: ['GruntFile.js', 'core/components/**/*.js', 'js/libs/**/*.js'],
-                tasks: ['concat', 'uglify'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['concat', 'uglify']
             },
 
-        }
+        } 
 
     });
 
