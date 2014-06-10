@@ -1,11 +1,11 @@
 {
   "name": "sassanimation",
   "homepage": "https://github.com/jimmyjamieson/sassanimation",
-  "_release": "1e299afe0f",
+  "_release": "f079487f32",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "1e299afe0fd2ef2d3cb0a51a739e873ffffbe7c4"
+    "commit": "f079487f324352cbf551d84e32d7dfe4252c12c1"
   },
   "_source": "https://github.com/jimmyjamieson/sassanimation.git",
   "_target": "*",
