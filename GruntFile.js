@@ -17,9 +17,9 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },                           // target
                 files: {                        // dictionary of files
-                    'woo.css': 'woo.scss'        // 'destination': 'source'
+                    'build/css/app.css': 'woo.scss'        // 'destination': 'source'
                 }
-            },
+            }, 
         },
 
         // Merge Javascript Files
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 src: [
 
                 ],
-                dest: 'js/app.js'
+                dest: 'build/js/app.js' 
             }
         },
 
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 files: {
-                    'js/app.min.js': ['js/app.js']
+                    'build/js/app.min.js': ['build/js/app.js']
                 }
             }
         },
