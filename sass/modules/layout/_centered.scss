@@ -1,6 +1,6 @@
-@mixin centered (
-  $inner...
-) {
+// Usefull for centering content
+
+@mixin centered ($inner...) {
 
   display: table;
   width: 100%;

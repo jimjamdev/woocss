@@ -1,0 +1,15 @@
+// =============================================================
+//
+// grid.settings.scss
+// Define the global grid settings for use throughout the sites.
+// Author: Ian Jamieson
+//
+// =============================================================
+
+@include global-box-sizing(border-box); 
+
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+  gutter-position: inside, // before | after | split | inside | inside-static
+);
