@@ -1,12 +1,16 @@
+@mixin menu {
+    background: $orange;
+    @extend %menu;
+}
+
 %menu {
     @extend %clearfix;
-    background: $orange;
     //min-height: 50px;
     .container {
         position: relative;
     }
     ul, li {
-        @extend %reset-list;
+        @extend %reset; 
     }
     .sub-menu {
         height: 55px;
@@ -20,8 +24,7 @@
         }
         // Default hover
         li {
-            position: relative;
-            @extend %animate;
+            position: relative; 
             display: block;
             height: 55px;
             &:hover > {
@@ -56,18 +59,17 @@
             display: none;
             z-index: 999;
             background: $white;
-            border: solid 1px $gray-light;
+            border: solid 1px $gray;
             a {
                 padding: 0.5em;
                 color: $orange;
             }
             .parent {
                 a {
-                    color: $gray-darker;
+                    color: $black; 
                 }
             }
             li {
-                @extend %animate;
                 display: block;
                 padding: 0;
                 width: 100%;
@@ -103,3 +105,4 @@
         }
     }
 }
+
