@@ -1,0 +1,16 @@
+@mixin centered (
+  $inner...
+) {
+
+  display: table;
+  width: 100%;
+
+  $inner: if(length($inner) == 0, ".content--centered", $inner);
+  @each $cell-selector in $inner {
+    & > #{$cell-selector} {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+}

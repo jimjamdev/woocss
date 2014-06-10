@@ -1,8 +1,0 @@
-@function set-color-shade($color) {
-    @if (lightness( $color ) > 50) {
-      @return darken($color, 20%);
-    }
-    @else {
-      @return lighten($color, 20%);
-    }
-}

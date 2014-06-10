@@ -1,0 +1,26 @@
+// =============================================================
+//
+// var/colors.scss
+// Define the global color variables for the site(s).
+// Author: Ian Jamieson
+//
+// =============================================================
+
+$black:  #000;
+$white:  #fff;
+$gray:   #e2e2e2;
+$blue:   #5eb8ce;
+$orange: #f7921e;
+$green:  #61bb46;
+$yellow: #f8ac1e;
+$red:    #fe624e;
+
+// Feedback
+
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+$base-color: $red !default;
+$alt-color: complement($base-color) !default;
+//$alt-color: invert($base-color) !default;

@@ -3,6 +3,8 @@ module.exports = function(grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
 
 
@@ -10,32 +12,31 @@ module.exports = function(grunt) {
 
 
 
-        compass: {
+        /*sass: {
             build: {
                 options: {
                     config: 'config.rb',
                     force: true
                 }
             }
-        },
-
-        // Use once lib-sass has been updated to work with @extend and %placeholder    
-        /*sass: {                                 // task
-            dist: {   
-            options: {
-                outputStyle: 'compressed'
-            },                          // target
+        },*/
+        
+        sass: {                                    // task
+            production: {     
+                options: {                 // Target options
+                    style: 'compressed'
+                },                           // target
                 files: {                        // dictionary of files
-                    'woocss.css': 'woocss.scss'     // 'destination': 'source'
+                    'woo.css': 'woo.scss'        // 'destination': 'source'
                 }
-            }
-        },*/ 
+            },
+        },
 
         // Merge Javascript Files
         concat: {
-            js: {
+            js: { 
                 src: [
-                    'vendor/components/jquery/jquery.js',
+
                 ],
                 dest: 'js/app.js'
             }
@@ -50,23 +51,47 @@ module.exports = function(grunt) {
             }
         },
 
+        // Remove unused css selectors. Currently not used until I work out js based css.
+        /*uncss: {
+          dist: {
+            files: {
+              'css/ecenglish/app.uncss.css': ['http://ecenglish.html/_design/html/', 'http://ecenglish.html/_design/html/destination.php']
+            }
+          }
+        },*/
+
+        // Compress CSS
+        /*cssmin: {
+            combine: {
+                files: {
+                    'css/ecenglish/app.min.css': ['css/ecenglish/app.css'],
+                    //'css/ecenglish/app.tiny.min.css': ['css/ecenglish/app.tiny.css']
+                }
+            }
+        },*/
 
 
         // == Watch List =============================================
 
         watch: {
-            files: ['GruntFile.js', 'docs/*', '/*', 'img/*', 'js/*'],
+            files: ['GruntFile.js', 'html/*', 'css/*', 'img/*', 'js/*', 'img/*'],
             options: {
                 livereload: true,
                 spawn: false,
             },
             sass: {
-                files: ['GruntFile.js', '**/*.scss', 'libs/**/*', 'sass/**/*'],
-                tasks: ['sass']
+                files: ['GruntFile.js', '**/*.scss', 'sass/**/*', 'sass/modules/**/*'],
+                tasks: ['sass'],
+                options: {
+                    spawn: false,
+                }
             },
             js: {
-                files: ['GruntFile.js', 'libs/woojs/**/*.js', 'js/**/*.js'],
-                tasks: ['concat', 'uglify']
+                files: ['GruntFile.js', 'core/components/**/*.js', 'js/libs/**/*.js'],
+                tasks: ['concat', 'uglify'],
+                options: {
+                    spawn: false,
+                }
             },
 
         }

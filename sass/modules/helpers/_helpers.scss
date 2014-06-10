@@ -1,0 +1,75 @@
+// Clearfix helper ###################
+
+%clearfix, .clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Hide ############################
+
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+%visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+%invisible {
+    visibility: hidden;
+}
+
+// Reset ############################
+
+%reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Opacity ##########################
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Text Layout helpers ##############
+
+%text-left, .text-left {
+	text-align: left;
+}
+
+%text-right, .text-right {
+	text-align: right;
+}
+
+%text-center, .text-center {
+	text-align: center;
+}

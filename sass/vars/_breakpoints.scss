@@ -1,0 +1,55 @@
+$mobile-vert: max-width 35em; // Mobile Vertical * Is mobile first, so this will likely be unused *
+$mobile-horz: max-width 45em;
+
+// Tablet Vertical
+$tablet-vert: 40em;
+// Tablet Horizontal
+$tablet-horz: 63em;
+
+// Desktop Horizontal & IE8
+$desktop: 63em;
+// Extra Wide Desktop
+$desktop-wide: 80em;
+
+// Media Query Mixins
+// You can now use: @include desktop {} in your code.
+
+@mixin mobile {
+    @include breakpoint($mobile-vert) {
+        @content;
+    }
+}
+
+@mixin mobile-wide {
+    @include breakpoint($mobile-horz) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include breakpoint($tablet-vert) {
+        @content;
+    }
+}
+
+@mixin tablet-wide {
+    @include breakpoint($tablet-horz) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @include breakpoint($desktop) {
+        @content;
+    }
+
+    .oldie & {
+        @content; // Applied to IE8 users using the .oldie class in the html tag. <html class="oldie">
+    }
+}
+
+@mixin desktop-wide {
+    @include breakpoint($desktop-wide) {
+        @content;
+    }
+}

@@ -1,21 +1,21 @@
 /*! woocss.com by Ian Jamieson @ cogocreative.com */
 
-// External third party libs
-@import "susy";
-@import "breakpoint";
+// Third party libs
+@import "libs/susy/sass/susy";
+@import "libs/breakpoint/stylesheets/breakpoint"; 
 
 // Reset first 
 @import "reset";
 
 // External woocss libs
-@import "libs/sassfunctions/sassfunctions";
 @import "libs/sassanimation/sassanimation";
 @import "libs/sassbuttons/sassbuttons";
 
-// Base
-@import "breakpoints";
-@import "colors";
-@import "type";
+// Base Variables
+@import "vars/vars";
 
 // Components
-@import "components/components";
+@import "modules/modules";
+
+// Print styles
+@import "print";
