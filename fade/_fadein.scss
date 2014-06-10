@@ -1,11 +1,15 @@
 // Fade In
 
-	@include keyframe(fadeIn) {
-	    0% {opacity: 0;}
-	    100% {opacity: 1;}
-	}
+@include keyframe(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 %fadeIn {
-    @extend %fadeInKeyframes;
     @include animation(1s, 5s, fadeIn);
-} 
+}
