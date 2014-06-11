@@ -1,4 +1,4 @@
-@import "../../vars/vars";
+
 
 @function colorize($color, $change: n) {
   @if $change == l1 {
@@ -57,4 +57,15 @@
       background-color: rgba($color, $percentage);
     }
   }
+}
+
+// Compass tint and shade
+
+@function tint($color, $percent){
+    @return mix(white, $color, $percent);
+}
+
+
+@function shade($color, $percent){
+    @return mix(black, $color, $percent);
 }

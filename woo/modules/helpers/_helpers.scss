@@ -15,12 +15,12 @@
 
 // Hide ############################
 
-%hidden {
+%hidden, .hidden {
     display: none !important;
     visibility: hidden;
 }
 
-%visually-hidden {
+%visually-hidden, .visibility-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -40,7 +40,7 @@
     }
 }
 
-%invisible {
+%invisible, .invisible {
     visibility: hidden;
 }
 

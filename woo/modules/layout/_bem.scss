@@ -14,29 +14,30 @@
     }
 }
 
+/*
+
 $module: "block";
 
 .#{$module} {
     color: purple;
-    // Header
+   
     @include element(header) {
         color: orange;
     }
 
-    // Text
     @include element(text) {
         color: black;
-        // Text Link
+     
         @include modifier(link) {
-            //link modifier
+           
             color: green;
         }
     }
 
-    // Featured
+  
     &--featured {
         .#{$module}__content {
             background: #eee;
         }
     }
-}
+}*/
