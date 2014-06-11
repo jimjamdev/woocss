@@ -1,0 +1,9 @@
+@include keyframe(spin) {
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+%spin {
+	@include animation(spin, 1s, 0s, infnite);
+}

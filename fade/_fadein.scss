@@ -11,5 +11,5 @@
 
 
 %fadeIn {
-    @include animation(1s, 5s, fadeIn);
+    @include animation(fadeIn, 1s, 1s);
 }
