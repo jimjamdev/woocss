@@ -3,13 +3,10 @@
 // Third party libs
 @import "libs/susy/sass/susy";
 @import "libs/breakpoint/stylesheets/breakpoint";
+@import "libs/sassanimation/sassanimation";
 
 // Reset first 
 @import "reset";
-
-// External woocss libs
-@import "libs/sassanimation/sassanimation";
-@import "libs/sassbuttons/sassbuttons";
 
 // Base Variables
 @import "vars/vars";
