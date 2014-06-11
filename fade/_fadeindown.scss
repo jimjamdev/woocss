@@ -13,5 +13,5 @@
 
 
 %fadeInDown {
-    @include animation(fadeInDown, 1s, 1s);
+    @include animation(fadeInDown, 1s, 1s, forwards);
 }
