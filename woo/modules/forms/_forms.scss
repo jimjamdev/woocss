@@ -12,8 +12,7 @@ $inputs-list: 'input[type="email"]',
               'input[type="url"]',
               'textarea',
               'select',
-
-              // Webkit & Gecko may change the display of these in the future
+              
               'input[type="color"]',
               'input[type="date"]',
               'input[type="datetime"]',
@@ -33,7 +32,7 @@ $all-inputs: $unquoted-inputs-list;
 // You must use interpolation on the variable:
 // #{$all-text-inputs}
 //************************************************************************//
-//   #{$all-inputs}, textarea {
+//   #{$all-inputs} {
 //     border: 1px solid red;
 //   }
 

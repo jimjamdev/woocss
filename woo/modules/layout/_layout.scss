@@ -1,2 +1,36 @@
-@import "bem";
-@import "centered";
+// ====================================================
+// B.E.M Modules ======================================
+// ====================================================
+
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+// modifiers get appended with "--" and the $name
+
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// ====================================================
+// Center content =====================================
+// ====================================================
+
+@mixin centered ($inner...) {
+
+  display: table;
+  width: 100%;
+
+  $inner: if(length($inner) == 0, ".content__centered", $inner);
+  @each $cell-selector in $inner {
+    & > #{$cell-selector} {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+}
