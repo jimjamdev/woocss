@@ -39,7 +39,7 @@ $default-animation-delay: 2s !default;
 
 // Standard Animation properties
 
-@mixin animation ($animation, $default-animation-duration 1s, $default-animation-delay: 1s, $default-animation-fill-mode: forwards) {
+@mixin animation ($animation, $default-animation-duration 1s, $default-animation-delay: 1s, $default-animation-fill-mode: "forwards") {
     -webkit-animation-delay: $default-animation-delay;
     -webkit-animation-duration: $default-animation-duration;
     -webkit-animation-name: $animation;
