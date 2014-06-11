@@ -19,20 +19,20 @@ $default-animation-delay: 2s !default;
 
 // Standard Keyframe Properties
 
-@mixin keyframe (keyframes) {
-    @-webkit-keyframes #{keyframes} { 
+@mixin keyframe (animation) {
+    @-webkit-keyframes #{animation} { 
         @content;
     }
  
-    @-moz-keyframes #{keyframes} {
+    @-moz-keyframes #{animation} {
         @content;
     }
  
-    @-o-keyframes #{keyframes} {
+    @-o-keyframes #{animation} {
         @content;
     }
  
-    @keyframes #{keyframes} {
+    @keyframes #{animation} {
         @content;
     }
 }
