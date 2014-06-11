@@ -3,42 +3,48 @@
 // Usage: .loader { @extend %twinner-spinner; }
 // ====================================================
 
-// Vars
-$loader-style: double; 
-$loader-width: 0.5em;
-$loader-color: #ecf0f1;
-$loader-size: 150px;
-$loader-speed: 1s;
 
+// Extender
 %twinner-spinner {
-  width: 1em;
-  height: 1em;
-  font-size: $loader-size;
-  position: relative;
-  @media (max-width: $loader-size * 1.5), (max-height: $loader-size * 1.5) {
-    font-size: $loader-size/2;
-  }
-  &:before, &:after {
-    content: "";
-    top: 0;
-    display: block;
     width: 1em;
     height: 1em;
-    position: absolute;
-    border-width: $loader-width;
-    border-style: $loader-style;
-    border-color: transparent;
-    box-sizing: border-box;
-    border-radius: 1em;
-    animation: spin $loader-speed infinite;
-  }
-  &:after {
-    left: 0;
-    border-left-color: $loader-color;
-  }
-  &:before {
-    right: 0;
-    border-right-color: $loader-color;
-    animation-delay: $loader-speed/-4;
-  }
+    position: relative;
+    &:before, &:after {
+        content: "";
+        top: 0;
+        display: block;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        border-color: transparent;
+        box-sizing: border-box;
+        border-radius: 1em;
+    }
+    &:after {
+        left: 0;
+    }
+    &:before {
+        right: 0;
+    }
+}
+
+// Mixin
+@mixin twinner-spinner($loader-size: 150px, $loader-width: 0.5em, $loader-color: $green, $loader-speed: 1s, $loader-style: double) {
+    font-size: $loader-size;
+    @media (max-width: $loader-size * 1.5), (max-height: $loader-size * 1.5) {
+        font-size: $loader-size / 2;
+    }
+    &:before, &:after {
+        border-width: $loader-width;
+        border-style: $loader-style;
+        animation: spin $loader-speed infinite;
+    }
+    &:after {
+        border-left-color: $loader-color;
+    }
+    &:before {
+        border-right-color: $loader-color;
+        animation-delay: $loader-speed / -4;
+    }
+    @extend %twinner-spinner;
 }

@@ -1,8 +1,8 @@
-//************************************************************************//
-// Generate a variable ($all-text-inputs) with a list of all html5
-// input types that have a text-based input, excluding textarea.
-// http://diveintohtml5.org/forms.html
-//************************************************************************//
+// ====================================================
+// Form Fields ========================================
+// Usage: .form { #{$all-inputs} { border: 1px solid red; } }
+// ====================================================
+
 $inputs-list: 'input[type="email"]',
               'input[type="number"]',
               'input[type="password"]',
@@ -29,14 +29,10 @@ $unquoted-inputs-list: ();
 
 $all-inputs: $unquoted-inputs-list;
 
-// You must use interpolation on the variable:
-// #{$all-text-inputs}
-//************************************************************************//
-//   #{$all-inputs} {
-//     border: 1px solid red;
-//   }
-
-// Placeholders ############################################################
+// ====================================================
+// Form Placeholders ==================================
+// Usage: .form { @include placeholder { color: $red } }
+// ====================================================
 
 @mixin placeholder {
     ::-webkit-input-placeholder {

@@ -1,2 +1,6 @@
 // Import WOOCSS base
 @import "woo/base";
+
+.loader {
+	@include twinner-spinner;
+}

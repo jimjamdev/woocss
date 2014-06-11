@@ -11,7 +11,7 @@
 
 $default-animation-duration: 1s !default;
 $default-animation-timing-function: ease !default;
-$default-animation-fill-mode: both !default;
+$default-animation-fill-mode-mode: forwards !default;
 $default-animation-iterations: 1 !default;
 $default-animation-direction: normal !default;
 $default-animation-play-state: running !default;
@@ -20,43 +20,43 @@ $default-animation-delay: 2s !default;
 // Standard Keyframe Properties
 
 @mixin keyframe ($animation) {
-    @-webkit-keyframes #{$animation} { 
+    @-webkit-keyframes #{animation} { 
         @content;
     }
  
-    @-moz-keyframes #{$animation} {
+    @-moz-keyframes #{animation} {
         @content;
     }
  
-    @-o-keyframes #{$animation} {
+    @-o-keyframes #{animation} {
         @content;
     }
  
-    @keyframes #{$animation} {
+    @keyframes #{animation} {
         @content;
     }
 }
 
 // Standard Animation properties
 
-@mixin animation ($animation, $default-animation-delay, $default-animation-duration) {
+@mixin animation ($animation, $default-animation-duration, $default-animation-delay, $default-animation-fill-mode) {
     -webkit-animation-delay: $default-animation-delay;
     -webkit-animation-duration: $default-animation-duration;
     -webkit-animation-name: $animation;
-    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -webkit-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
  
     -moz-animation-delay: $default-animation-delay;
     -moz-animation-duration: $default-animation-duration;
     -moz-animation-name: $animation;
-    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -moz-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
  
     -o-animation-delay: $default-animation-delay;
     -o-animation-duration: $default-animation-duration;
     -o-animation-name: $animation;
-    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -o-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
  
     animation-delay: $default-animation-delay;
     animation-duration: $default-animation-duration;
     animation-name: $animation;
-    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
 }

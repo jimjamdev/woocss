@@ -11,13 +11,14 @@
 // Base Variables
 @import "vars/vars";
 
-// Modules/Functions
+// Functions
 @import "functions/functions";
+
+// Modules
 @import "modules/modules";
 
 // Print styles
 @import "print";
-
 
 // Turns on debug. $debug=true;
 $debug: false;

@@ -1,8 +1,0 @@
-@function set-background-color($color) {
-    @if (lightness( $color ) > 60) {
-      @return darken($color, 10%);
-    }
-    @else {
-      @return lighten($color, 20%);
-    }
-}
