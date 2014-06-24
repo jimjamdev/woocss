@@ -5,11 +5,11 @@
 	font-family:inherit;
 	font-size:100%;
 	cursor:pointer;
-	border:none;
+	border: solid $default-button-border-size $default-button-border-color;
 	margin:0;
-	background-color: $button-bg-color;
-	color: $button-color;
-	border-radius:4px;
+	background-color: $default-button-bg;
+	color: $default-button-color;
+	border-radius: $default-button-border-radius;
 	overflow:visible;
 	text-decoration: none;
 	&:hover, &:active, &:focus, &:visited {

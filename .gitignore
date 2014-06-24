@@ -2,6 +2,7 @@
 .metadata
 bin/
 tmp/
+vendor/
 node_modules/
 .sass-cache
 *.tmp

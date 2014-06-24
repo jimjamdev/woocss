@@ -1,4 +1,6 @@
-// Clearfix helper ###################
+// ====================================================
+// Clearfix ===========================================
+// ====================================================
 
 %clearfix, .clearfix {
     zoom: 1;
@@ -13,7 +15,9 @@
     }
 }
 
-// Hide ############################
+// ====================================================
+// Hide ===============================================
+// ====================================================
 
 %hidden, .hidden {
     display: none !important;
@@ -44,15 +48,22 @@
     visibility: hidden;
 }
 
-// Reset ############################
+// ====================================================
+// Reset ==============================================
+// ====================================================
 
 %reset {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     list-style: none;
 }
 
-// Opacity ##########################
+%reset-padding {
+    padding:0;
+}
+
+// ====================================================
+// Opacity ============================================
+// ====================================================
 
 @mixin opacity($opacity) {
   opacity: $opacity;
@@ -60,24 +71,46 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-// Text Layout helpers ##############
+// ====================================================
+// Text Alignment =====================================
+// ====================================================
 
-%text-left, .text-left {
+%text-left, 
+.text-left {
 	text-align: left;
 }
 
-%text-right, .text-right {
+%text-right,
+.text-right {
 	text-align: right;
 }
 
-%text-center, .text-center {
+%text-center,
+.text-center {
 	text-align: center;
 }
 
-// Layout helpers
+%float-left,
+.float-left {
+    float: left;
+}
+
+%float-right,
+.float-right {
+    float: right;
+}
+
+%float-none,
+.float-none {
+    float: none;
+}
+
+// ====================================================
+// Layout helpers =====================================
+// ====================================================
 
 %animate {
-    @include transition (all, 0.5s, ease-in-out);
+    @include transition (all, 1s, ease-in-out);
 }
 
 %absolute {

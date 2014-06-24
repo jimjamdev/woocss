@@ -14,6 +14,9 @@ $desktop-wide: 80em;
 // Media Query Mixins
 // You can now use: @include desktop {} in your code.
 
+// Show mobile navigation on this size:
+//$alt-ui: 
+
 @mixin mobile {
     @include breakpoint($mobile-vert) {
         @content;
