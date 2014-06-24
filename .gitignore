@@ -4,6 +4,7 @@ bin/
 tmp/
 vendor/
 node_modules/
+build/
 .sass-cache
 *.tmp
 *.bak
