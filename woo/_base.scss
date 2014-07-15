@@ -1,9 +1,9 @@
 /*! woocss.com by Ian Jamieson @ cogocreative.com */
 
 // Third party libs
-@import "vendor/susy/sass/susy";
-@import "vendor/breakpoint/stylesheets/breakpoint";
-@import "vendor/sassanimation/sassanimation";
+@import "../app/bower_components/susy/sass/susy";
+@import "../app/bower_components/breakpoint/stylesheets/breakpoint";
+@import "../app/bower_components/sassanimation/sassanimation";
 
 // Reset first 
 @import "reset";

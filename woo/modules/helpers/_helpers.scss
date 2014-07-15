@@ -24,7 +24,7 @@
     visibility: hidden;
 }
 
-%visually-hidden, .visibility-hidden {
+%visually-hidden, .visibility--hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -76,32 +76,32 @@
 // ====================================================
 
 %text-left, 
-.text-left {
+.text--left {
 	text-align: left;
 }
 
 %text-right,
-.text-right {
+.text--right {
 	text-align: right;
 }
 
 %text-center,
-.text-center {
+.text--center {
 	text-align: center;
 }
 
 %float-left,
-.float-left {
+.float--left {
     float: left;
 }
 
 %float-right,
-.float-right {
+.float--right {
     float: right;
 }
 
 %float-none,
-.float-none {
+.float--none {
     float: none;
 }
 
@@ -129,12 +129,10 @@
     min-height: 100%;
 }
 
-%abs-full-height {
+%full-screen {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    overflow: auto;
 }
