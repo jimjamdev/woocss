@@ -106,22 +106,30 @@
 }
 
 // ====================================================
-// Layout helpers =====================================
+// Default Animation ==================================
 // ====================================================
 
 %animate {
-    @include transition (all, 1s, ease-in-out);
+    @include transition (all, 0.5s, ease-in-out);
 }
 
-%absolute {
-    position: absolute;
-    width: 100%;
-}
+// ====================================================
+// Background Defaults ================================
+// ====================================================
 
 %default-background-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+// ====================================================
+// Layout helpers =====================================
+// ====================================================
+
+%absolute {
+    position: absolute;
+    width: 100%;
 }
 
 %full-height {

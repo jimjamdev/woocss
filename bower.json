@@ -7,7 +7,7 @@
   "description": "WooCss Packages",
   "main": "woocss.css",
   "keywords": [
-    "ec"
+    "woocss"
   ],
   "license": "MIT",
   "homepage": "www.woocss.com",
@@ -19,10 +19,12 @@
     "tests"
   ],
   "dependencies": {
-      "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
       "woojs": "https://github.com/jimmyjamieson/woojs.git",
-      "susy":  "https://github.com/ericam/susy.git",
-      "breakpoint": "https://github.com/Team-Sass/breakpoint.git"
-
+      "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
+      "compass": "https://github.com/harp/compass.git",
+      "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
+      "susy": "https://github.com/harp/susy.git"
+      //"susy":  "https://github.com/ericam/susy.git"
+      //"breakpoint": "https://github.com/Team-Sass/breakpoint.git"
   }
 }
