@@ -4,12 +4,12 @@
   "author": "Ian Jamieson",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-sass": "*",
+    "grunt": "^0.4.5",
     "grunt-contrib-concat": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "matchdep": "*",
-    "time-grunt": "^0.3.2"
+    "time-grunt": "^0.3.2",
+    "grunt-sass": "^0.14.0"
   }
 }

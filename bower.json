@@ -24,7 +24,5 @@
       "compass": "https://github.com/harp/compass.git",
       "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
       "susy": "https://github.com/harp/susy.git"
-      //"susy":  "https://github.com/ericam/susy.git"
-      //"breakpoint": "https://github.com/Team-Sass/breakpoint.git"
   }
 }
