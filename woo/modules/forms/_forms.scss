@@ -24,7 +24,7 @@ $inputs-list: 'input[type="email"]',
 $unquoted-inputs-list: ();
 
 @each $input-type in $inputs-list {
-  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma) !global;
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
 }
 
 $all-inputs: $unquoted-inputs-list;
