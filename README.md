@@ -7,8 +7,10 @@ The current release is still under development.
 ROADMAP
 
 1. Complete base sassanimation for import.
-2. Get susy, or a version of working in libsass
-3. 
+2. Get Susy, or a version of, working in libsass
+3. Get Breakpoint, or a version of, working in libsass
+4. Complete more components
+5. Work on woojs. Jquery/Zepto library.
 
 == Installation =======================================================
 
