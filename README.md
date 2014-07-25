@@ -10,7 +10,7 @@ ROADMAP
 2. Get Susy, or a version of, working in libsass
 3. Get Breakpoint, or a version of, working in libsass
 4. Complete more components
-5. Work on woojs. Jquery/Zepto library.
+5. Create a yeoman installer
 
 == Installation =======================================================
 
