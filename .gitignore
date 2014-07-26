@@ -3,6 +3,7 @@
 bin/
 tmp/
 vendor/
+bower_components/
 node_modules/
 app/*
 build/

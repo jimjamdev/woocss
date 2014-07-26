@@ -23,5 +23,5 @@
 @import "print";
 
 // Turns on debug. $debug=true;
-$debug: false;
+$debug: false !default;
 @import "debug";
