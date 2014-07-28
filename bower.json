@@ -24,6 +24,6 @@
       "compass": "https://github.com/jimmyjamieson/compass-libsass.git",
       "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
       "sass-list-maps": "https://github.com/lunelson/sass-list-maps.git",
-      "susy-libsass": "https://github.com/jimmyjamieson/susy.git"
+      "susyone-libsass": "https://github.com/jimmyjamieson/susyone-libsass.git"
   }
 }
