@@ -1,21 +1,15 @@
-$mobile-vert: max-width 35em; // Mobile Vertical * Is mobile first, so this will likely be unused *
+
+/*
+$mobile-vert: max-width 35em; 
 $mobile-horz: max-width 45em;
-
-// Tablet Vertical
 $tablet-vert: 40em;
-// Tablet Horizontal
 $tablet-horz: 63em;
-
-// Desktop Horizontal & IE8
 $desktop: 63em;
-// Extra Wide Desktop
 $desktop-wide: 80em;
+*/
 
-// Media Query Mixins
-// You can now use: @include desktop {} in your code.
+$desktop : 12 oldie;  // Output is included under ``.lt-ie9`` class,
 
-// Show mobile navigation on this size:
-//$alt-ui: 
 
 @mixin mobile {
     @include breakpoint($mobile-vert) {
@@ -42,7 +36,7 @@ $desktop-wide: 80em;
 }
 
 @mixin desktop {
-    @include breakpoint($desktop) {
+    @include at-breakpoint($desktop) {
         @content;
     }
 
