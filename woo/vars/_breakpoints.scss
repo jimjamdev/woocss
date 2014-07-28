@@ -16,25 +16,25 @@ $mobile : 2;
 $mobile-wide : 2;
 
 @mixin mobile {
-    @include breakpoint($mobile-vert) {
+    @include at-breakpoint($mobile) {
         @content;
     }
 }
 
 @mixin mobile-wide {
-    @include breakpoint($mobile-horz) {
+    @include at-breakpoint($mobile-wide) {
         @content;
     }
 }
 
 @mixin tablet {
-    @include breakpoint($tablet-vert) {
+    @include at-breakpoint($tablet) {
         @content;
     }
 }
 
 @mixin tablet-wide {
-    @include breakpoint($tablet-horz) {
+    @include at-breakpoint($tablet-wide) {
         @content;
     }
 }
@@ -46,11 +46,5 @@ $mobile-wide : 2;
 
     .oldie & {
         @content; // Applied to IE8 users using the .oldie class in the html tag. <html class="oldie">
-    }
-}
-
-@mixin desktop-wide {
-    @include breakpoint($desktop-wide) {
-        @content;
     }
 }
