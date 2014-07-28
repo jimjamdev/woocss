@@ -35,12 +35,12 @@ module.exports = function(grunt) {
             }
         },
 
-        autoprefixer: {
-            options: {
-              // Task-specific options go here.
-            },
-            your_target: {
-              'app.css'
+         autoprefixer: {
+            single_file: {
+              options: {
+                browsers: ['last 2 version', 'ie 8', 'ie 9']
+              },
+              src: 'woo.css'
             },
           },
 
@@ -63,15 +63,14 @@ module.exports = function(grunt) {
         },*/
 
         // Compress CSS
-        /*cssmin: {
+         cssmin: {
             combine: {
                 files: {
-                    'css/ecenglish/app.min.css': ['css/ecenglish/app.css'],
+                    'app.min.css': ['app.css'],
                     //'css/ecenglish/app.tiny.min.css': ['css/ecenglish/app.tiny.css']
                 }
             }
-        },*/
-
+        },
 
         // == Watch List =============================================
 
@@ -82,8 +81,8 @@ module.exports = function(grunt) {
                 spawn: false,
             },
             sass: {
-                files: ['GruntFile.js', '**/*.scss', 'core/**/*', 'core/components/**/*'],
-                tasks: ['sass'],
+                files: ['GruntFile.js', '**/*.scss', 'app/bower_components/**/*', 'bower_components/**/*'],
+                tasks: ['sass', 'autoprefixer', 'cssmin'],
                 options: {
                     spawn: false,
                 }
