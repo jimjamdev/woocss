@@ -35,6 +35,15 @@ module.exports = function(grunt) {
             }
         },
 
+        autoprefixer: {
+            options: {
+              // Task-specific options go here.
+            },
+            your_target: {
+              'app.css'
+            },
+          },
+
         // Compress Javascript
         uglify: {
             build: {

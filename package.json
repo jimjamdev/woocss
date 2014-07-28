@@ -10,6 +10,7 @@
     "grunt-contrib-watch": "*",
     "matchdep": "*",
     "time-grunt": "^0.3.2",
-    "grunt-sass": "^0.14.0"
+    "grunt-sass": "^*",
+    "grunt-autoprefixer": "^*"
   }
 }
