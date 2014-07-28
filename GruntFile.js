@@ -38,7 +38,7 @@ module.exports = function(grunt) {
          autoprefixer: {
             single_file: {
               options: {
-                browsers: ['last 2 version', 'ie 8', 'ie 9']
+                browsers: ['last 2 version', 'ie 8', 'ie 9', 'Firefox ESR', 'Opera 12.1']
               },
               src: 'woo.css'
             },
