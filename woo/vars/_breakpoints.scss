@@ -1,5 +1,6 @@
 
 /*
+//Susy 2.0
 $mobile-vert: max-width 35em; 
 $mobile-horz: max-width 45em;
 $tablet-vert: 40em;
@@ -9,7 +10,10 @@ $desktop-wide: 80em;
 */
 
 $desktop : 12 oldie;  // Output is included under ``.lt-ie9`` class,
-
+$tablet : 10;
+$tablet-wide : 6;
+$mobile : 2;
+$mobile-wide : 2;
 
 @mixin mobile {
     @include breakpoint($mobile-vert) {
