@@ -13,7 +13,7 @@ $desktop : 12 oldie;  // Output is included under ``.lt-ie9`` class,
 $tablet : 6;
 $tablet-wide : 8;
 $mobile : 2;
-$mobile-wide : 2;
+$mobile-wide : 4;
 
 @mixin mobile {
     @include at-breakpoint($mobile) {
