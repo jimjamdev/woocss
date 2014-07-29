@@ -9,11 +9,11 @@ $desktop: 63em;
 $desktop-wide: 80em;
 */
 
-$desktop : 85em oldie;  // Output is included under ``.lt-ie9`` class,
-$tablet : 35em;
-$tablet-wide : 45em;
-$mobile : 10em;
-$mobile-wide : 10em;
+$desktop : 85em 12 oldie;  // Output is included under ``.lt-ie9`` class,
+$tablet : 35em 12;
+$tablet-wide : 45em 12;
+$mobile : 10em 12;
+$mobile-wide : 10em 12;
 
 @mixin mobile {
     @include at-breakpoint($mobile) {
