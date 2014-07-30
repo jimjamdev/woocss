@@ -127,6 +127,22 @@
 // Layout helpers =====================================
 // ====================================================
 
+%fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+%fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
 %absolute {
     position: absolute;
     width: 100%;
