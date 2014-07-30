@@ -21,7 +21,7 @@
   "dependencies": {
       "woojs": "https://github.com/jimmyjamieson/woojs.git",
       "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
-      "compass": "https://github.com/jimmyjamieson/compass-libsass.git",
+      "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
       "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
       "susyone-libsass": "https://github.com/jimmyjamieson/susyone-libsass.git"
   }
