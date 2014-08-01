@@ -9,11 +9,9 @@ $desktop: 63em;
 $desktop-wide: 80em;
 */
 
-$desktop : 85em 12 oldie;  // Output is included under ``.lt-ie9`` class,
-$tablet : 35em 12;
-$tablet-wide : 45em 12;
+$desktop : 45em 12 oldie;  // Output is included under ``.lt-ie9`` class,
+$tablet : 30em 12;
 $mobile : 12 30em;
-$mobile-wide : 35 20em;
 
 @mixin mobile {
     @include at-breakpoint($mobile) {
@@ -21,11 +19,6 @@ $mobile-wide : 35 20em;
     }
 }
 
-@mixin mobile-wide {
-    @include at-breakpoint($mobile-wide) {
-        @content;
-    }
-}
 
 @mixin tablet {
     @include at-breakpoint($tablet) {
@@ -33,11 +26,6 @@ $mobile-wide : 35 20em;
     }
 }
 
-@mixin tablet-wide {
-    @include at-breakpoint($tablet-wide) {
-        @content;
-    }
-}
 
 @mixin desktop {
     @include at-breakpoint($desktop) {
