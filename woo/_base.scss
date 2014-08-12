@@ -7,9 +7,9 @@
 @import "../../compass-libsass/compass";
 @import "../../susyone-libsass/susy";
 @import "../../modular-scale/stylesheets/modular-scale";
-//@import "../../sassanimation/sassanimation";
+@import "../../sassanimation/sassanimation";
 
-// Reset first 
+// Reset first
 @import "reset";
 
 // Functions
