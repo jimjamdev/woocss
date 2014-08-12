@@ -1,0 +1,23 @@
+// Fade In Up
+
+$fadeinup: false !default;
+
+@if $fadeinup == "true" {
+
+    @include keyframes(fadeinup) {
+        0% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: translateY(-2em);
+        }
+    }
+
+
+    %fadeinup {
+        @include animation(fadeinup 1s);
+    }
+
+}

@@ -1,15 +1,25 @@
 // Fade In
+$fadein: false !default; // set default
 
-@include keyframe(fadeIn) {
-    0% {
-        opacity: 0;
+// Only import the keyframes if the animation is set to true. Keeps thhe code small and tidy
+@if $fadein == "true" {
+
+
+
+    @include keyframes(fadein) {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
+
+
+    %fadein {
+        @include animation(fadein 1s);
     }
-}
 
 
-%fadeIn {
-    @include animation(fadeIn, 1s, 1s, forwards);
+
 }

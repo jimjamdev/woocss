@@ -3,6 +3,7 @@
 bin/
 tmp/
 node_modules/
+test/
 .sass-cache
 *.tmp
 *.bak

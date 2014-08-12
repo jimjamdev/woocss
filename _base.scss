@@ -1,68 +1,3 @@
-// Transition Mixin
-@mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
-}
-
-// Defaults
-
-$default-animation-duration: 1s !default;
-$default-animation-timing-function: ease !default;
-$default-animation-fill-mode-mode: both !default;
-$default-animation-iterations: 1 !default;
-$default-animation-direction: normal !default;
-$default-animation-play-state: running !default;
-$default-animation-delay: 2s !default;
-
-// Standard Keyframe Properties
-
-@mixin keyframe ($animation) {
-    @-webkit-keyframes #{animation} { 
-        @content;
-    }
- 
-    @-moz-keyframes #{animation} {
-        @content;
-    }
- 
-    @-o-keyframes #{animation} {
-        @content;
-    }
- 
-    @keyframes #{animation} {
-        @content;
-    }
-}
-
-// Standard Animation properties 
-
-@mixin animation ($animation, $default-animation-duration 1s, $default-animation-delay: 1s, $default-animation-fill-mode: "forwards") {
-    -webkit-animation-delay: $default-animation-delay;
-    -webkit-animation-duration: $default-animation-duration;
-    -webkit-animation-name: $animation;
-    -webkit-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
- 
-    -moz-animation-delay: $default-animation-delay;
-    -moz-animation-duration: $default-animation-duration;
-    -moz-animation-name: $animation;
-    -moz-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
- 
-    -o-animation-delay: $default-animation-delay;
-    -o-animation-duration: $default-animation-duration;
-    -o-animation-name: $animation;
-    -o-animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
- 
-    animation-delay: $default-animation-delay;
-    animation-duration: $default-animation-duration;
-    animation-name: $animation;
-    animation-fill-mode: $default-animation-fill-mode; /* this prevents the animation from restarting! */
-}
-
-
-// New
 
 @mixin animation($animate...) {
     $max: length($animate);
@@ -76,8 +11,8 @@ $default-animation-delay: 2s !default;
         }
     }
     -webkit-animation: $animations;
-    -moz-animation:    $animations;
-    -o-animation:      $animations;
+    //-moz-animation:    $animations;
+    //-o-animation:      $animations;
     animation:         $animations;
 }
 
@@ -85,24 +20,10 @@ $default-animation-delay: 2s !default;
     @-webkit-keyframes #{$animationName} {
         @content;
     }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
     @keyframes #{$animationName} {
         @content;
     }
 }
 
-// Use mixin
-
-@include keyframes(move-the-object) {
-  0%   { left: 100px; }
-  100% { left: 200px; }
-}
-
-.object-to-animate {
-  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
-} 
+// Import the library
+@import"fade/fade";

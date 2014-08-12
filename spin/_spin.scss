@@ -5,5 +5,5 @@
 }
 
 %spin {
-	@include animation(spin, 1s, 0s, infnite);
+	@include animation(spin 1s infnite);
 }
