@@ -2,7 +2,7 @@
 
 $fadeindown: false !default; // set default
 
-@if $fadeindown == "true" {
+@if $fadeindown != "" {
 
     @include keyframes(fadeindown) {
         0% {

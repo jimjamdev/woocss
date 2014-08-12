@@ -2,7 +2,7 @@
 
 $fadeinup: false !default;
 
-@if $fadeinup == "true" {
+@if $fadeinup != "" {
 
     @include keyframes(fadeinup) {
         0% {
