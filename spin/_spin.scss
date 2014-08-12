@@ -1,9 +1,12 @@
-@include keyframes(spin) {
-    from {
-        transform: rotate(360deg);
-    }
-}
+// Spin
+//@include animation(spin 1s infnite);
 
-%spin {
-	@include animation(spin 1s infnite);
+@mixin spin() {
+
+    @include keyframes(spin) {
+        from {
+            transform: rotate(360deg);
+        }
+    }
+
 }

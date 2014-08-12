@@ -1,8 +1,8 @@
 // Fade In Down
+//@include animation(fadeindown 1s);
 
-$fadeindown: false !default; // set default
 
-@if $fadeindown == "true" {
+@mixin fadeindown() {
 
     @include keyframes(fadeindown) {
         0% {
@@ -13,11 +13,6 @@ $fadeindown: false !default; // set default
             opacity: 1;
             -webkit-transform: translateY(0);
         }
-    }
-
-
-    %fadeInDown {
-        @include animation(fadeindown 1s);
     }
 
 }

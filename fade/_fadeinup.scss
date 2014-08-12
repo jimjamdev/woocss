@@ -1,8 +1,7 @@
 // Fade In Up
+//@include animation(fadeinup 1s);
 
-$fadeinup: false !default;
-
-@if $fadeinup == "true" {
+@mixin fadeinup() {
 
     @include keyframes(fadeinup) {
         0% {
@@ -13,11 +12,6 @@ $fadeinup: false !default;
             opacity: 0;
             -webkit-transform: translateY(-2em);
         }
-    }
-
-
-    %fadeinup {
-        @include animation(fadeinup 1s);
     }
 
 }
