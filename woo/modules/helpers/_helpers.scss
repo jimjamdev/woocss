@@ -71,7 +71,7 @@
 // Text Alignment =====================================
 // ====================================================
 
-%text-left, 
+%text-left,
 .text--left {
 	text-align: left;
 }
@@ -102,11 +102,40 @@
 }
 
 // ====================================================
-// Blocks =====================================
+// Padding ============================================
 // ====================================================
+%padding {
+    padding: $default-padding;
+}
+%padding-vertical {
+    padding-top: $default-padding;
+    padding-bottom: $default-padding;
+}
+%padding-horizontal {
+    padding-left: $default-padding;
+    padding-right: $default-padding;
+}
+%padding-top {
+    padding-top: $default-padding;
+}
+%padding-right {
+    padding-right: $default-padding;
+}
+%padding-bottom {
+    padding-bottom: $default-padding;
+}
+%padding-left {
+    padding-left: $default-padding;
+}
+
+// ====================================================
+// Blocks =============================================
+// ====================================================
+%block,
 .block {
     display: block;
 }
+%inline-block,
 .inline--block {
     display: inline-block;
 }
@@ -115,7 +144,7 @@
 // ====================================================
 
 %animate {
-    transition: all 0.5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 // ====================================================

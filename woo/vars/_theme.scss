@@ -1,3 +1,4 @@
+
 // ====================================================
 // Base Values ========================================
 // ====================================================
@@ -7,6 +8,7 @@ $base-font-family: $arial !default;
 $base-font-color: #555 !default;
 $base-font-style: normal !default;
 $base-font-weight: 400 !default;
+$default-padding: 10px !default;
 
 // ====================================================
 // Buttons ============================================
@@ -25,7 +27,7 @@ $default-button-border-size: 1px;
 // Headings
 $default-table-header-bg: darken($gray, 10%) !default;
 $default-table-header-padding: 1.25em !default;
-$default-table-padding: 1em !default; 
+$default-table-padding: 1em !default;
 $default-table-row-bg: $gray !default;
 $default-table-row-bg-alt: darken($gray, 2%) !default;
 $default-table-row-bg-hover: darken($gray, 5%) !default;
