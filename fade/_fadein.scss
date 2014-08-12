@@ -2,7 +2,7 @@
 $fadein: false !default; // set default
 
 // Only import the keyframes if the animation is set to true. Keeps thhe code small and tidy
-@if $fadein != "" {
+@if $fadein == "true" {
 
 
 

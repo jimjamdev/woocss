@@ -1,4 +1,4 @@
-@include keyframe(spin) {
+@include keyframes(spin) {
     from {
         transform: rotate(360deg);
     }
