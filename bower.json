@@ -24,6 +24,10 @@
       "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
       "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
       "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
-      "susyone-libsass": "https://github.com/jimmyjamieson/susyone-libsass.git"
+      "susyone-libsass": "https://github.com/jimmyjamieson/susyone-libsass.git",
+      "thoughtbot-bourbon": "https://github.com/thoughtbot/bourbon.git",
+      "thoughtbot-neat": "https://github.com/thoughtbot/neat.git",
+      "thoughtbot-bitters": "https://github.com/thoughtbot/bitters.git",
+      "thoughtbot-refills": "https://github.com/thoughtbot/refills.git"
   }
 }
