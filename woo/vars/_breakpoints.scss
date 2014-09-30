@@ -1,37 +1,86 @@
-/*
-//Susy 2.0
-$mobile-vert: max-width 35em;
-$mobile-horz: max-width 45em;
-$tablet-vert: 40em;
-$tablet-horz: 63em;
-$desktop: 63em;
-$desktop-wide: 80em;
-*/
+$xs: max-width 63em;
 
-/*$desktop : 55em 12 oldie;  // Output is included under ``.lt-ie9`` class,
-$tablet : 30em 12;
-$mobile : 12 30em;
+// Mobile Vertical * Is mobile first, so this will likely be unused *
+$sm: 35em;
+
+// Tablet Vertical
+$md: 63em;
+
+// Desktop Horizontal & IE8
+$lg: 80em;
+
+// Large Desktop Horizontal
+
+// Media Query Mixins
+// You can now use: @include desktop {} in your code.
 
 @mixin mobile {
-    @include at-breakpoint($mobile) {
+    @include breakpoint($xs) {
         @content;
     }
 }
-
 
 @mixin tablet {
-    @include at-breakpoint($tablet) {
+    @include breakpoint($sm) {
         @content;
     }
 }
 
-
 @mixin desktop {
-    @include at-breakpoint($desktop) {
+    @include breakpoint($md) {
         @content;
     }
 
     .oldie & {
-        @content; // Applied to IE8 users using the .oldie class in the html tag. <html class="oldie">
+        @content;
     }
-}*/
+}
+
+@mixin large {
+    @include breakpoint($lg) {
+        @content;
+    }
+}
+
+// Temp
+
+/*
+.msg {
+    @extend %fixed-bottom;
+    display: block;
+    background: rgba(white, 0.7);
+    text-align: center;
+    padding: 1em 0em;
+    color: white;
+    text-shadow: 0px 0px 1px rgba(black, 0.5);
+    z-index:999;
+    @include mobile {
+        background: rgba(yellow, 0.7);
+        color: darken(yellow, 80%);
+        &:after {
+            content: "Mobile Device";
+        }
+    }
+
+    @include tablet {
+        background: rgba(red, 0.7);
+        &:after {
+            content: "Tablet";
+        }
+    }
+
+    @include desktop {
+        background: rgba(green, 0.7);
+        &:after {
+            content: "Desktop";
+        }
+    }
+
+    @include large {
+        background: rgba(blue, 0.7);
+        &:after {
+            content: "Extra Large Display";
+        }
+    }
+}
+*/
