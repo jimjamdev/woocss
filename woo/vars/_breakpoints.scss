@@ -1,33 +1,36 @@
-$xs: max-width 63em;
-
-// Mobile Vertical * Is mobile first, so this will likely be unused *
-$sm: 35em;
-
-// Tablet Vertical
-$md: 63em;
-
-// Desktop Horizontal & IE8
-$lg: 80em;
-
-// Large Desktop Horizontal
-
-// Media Query Mixins
-// You can now use: @include desktop {} in your code.
+$mobile: 35em;
+$mobile-only: max-width 35em;
+$tablet: 35em;
+$tablet-vertical: 63em;
+$desktop: 63em;
+$desktop-large: 80em;
 
 @mixin mobile {
-    @include breakpoint($xs) {
+    @include breakpoint($mobile) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @include breakpoint($mobile-only) {
         @content;
     }
 }
 
 @mixin tablet {
-    @include breakpoint($sm) {
+    @include breakpoint($tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-vert {
+    @include breakpoint($tablet-vertical) {
         @content;
     }
 }
 
 @mixin desktop {
-    @include breakpoint($md) {
+    @include breakpoint($desktop) {
         @content;
     }
 
@@ -36,51 +39,8 @@ $lg: 80em;
     }
 }
 
-@mixin large {
-    @include breakpoint($lg) {
+@mixin desktop-large {
+    @include breakpoint($desktop-large) {
         @content;
     }
 }
-
-// Temp
-
-/*
-.msg {
-    @extend %fixed-bottom;
-    display: block;
-    background: rgba(white, 0.7);
-    text-align: center;
-    padding: 1em 0em;
-    color: white;
-    text-shadow: 0px 0px 1px rgba(black, 0.5);
-    z-index:999;
-    @include mobile {
-        background: rgba(yellow, 0.7);
-        color: darken(yellow, 80%);
-        &:after {
-            content: "Mobile Device";
-        }
-    }
-
-    @include tablet {
-        background: rgba(red, 0.7);
-        &:after {
-            content: "Tablet";
-        }
-    }
-
-    @include desktop {
-        background: rgba(green, 0.7);
-        &:after {
-            content: "Desktop";
-        }
-    }
-
-    @include large {
-        background: rgba(blue, 0.7);
-        &:after {
-            content: "Extra Large Display";
-        }
-    }
-}
-*/
