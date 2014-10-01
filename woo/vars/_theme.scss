@@ -14,7 +14,7 @@ $default-margin: $default-padding !default;
 // Buttons ============================================
 // ====================================================
 
-$default-button-bg: $default-button-bg;
+$default-button-bg: $gray;
 $default-button-color: darken($default-button-bg, 10%);
 $default-button-border-color: darken($default-button-bg, 3%);
 $default-button-border-radius: 3px;
