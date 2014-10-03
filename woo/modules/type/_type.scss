@@ -3,46 +3,47 @@
 // ====================================================
 
 @mixin font-size($size) {
-	font-size: $size;
-	font-size: rem($size); // <-- Function
+    font-size: $size;
+    font-size: calcRem($size);
+    // <-- Function
 }
 
 // ====================================================
 // Default Font Settings ==============================
 // ====================================================
 
-html,body {
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	font-weight: $base-font-weight;
-	font-style: $base-font-style;
-	color: $base-font-color;
+html, body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    font-style: $base-font-style;
+    color: $base-font-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: $base-font-weight;
+    font-weight: $base-font-weight;
 }
 
 h1 {
-	@include font-size(28px);
+    @include font-size(28px);
 }
 
 h2 {
-	@include font-size(22px);
+    @include font-size(22px);
 }
 
 h3 {
-	@include font-size(18px);
+    @include font-size(18px);
 }
 
 h4 {
-	@include font-size(16px);
+    @include font-size(16px);
 }
 
 h5 {
-	@include font-size(14px);
+    @include font-size(14px);
 }
 
 h6 {
-	@include font-size(12px);
+    @include font-size(12px);
 }
