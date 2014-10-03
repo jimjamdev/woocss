@@ -26,6 +26,7 @@
       "susy": "https://github.com/ericam/susy.git",
       "breakpoint": "https://github.com/at-import/breakpoint.git",
       "susyone-libsass": "https://github.com/jimmyjamieson/susyone-libsass.git",
-      "refills": "https://github.com/thoughtbot/refills.git"
+      "refills": "https://github.com/thoughtbot/refills.git",
+      "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git"
   }
 }
