@@ -3,14 +3,19 @@
 // ====================================================
 
 @mixin font-size($size) {
-    font-size: $size;
-    font-size: calcRem($size);
-    // <-- Function
+    @include adjust-font-size-to($size);
 }
 
 // ====================================================
 // Default Font Settings ==============================
 // ====================================================
+
+$base-font-color: #a0a0a0;
+$base-font-size: 16px;
+$base-line-height: 28px;
+$rhythm-unit: "rem";
+
+@include establish-baseline;
 
 html, body {
     font-family: $base-font-family;
