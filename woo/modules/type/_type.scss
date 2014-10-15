@@ -13,7 +13,7 @@ $base-line-height: 28px !default;
 // ====================================================
 
 @mixin font-size($size) {
-    @include adjust-font-size-to($size);
+    @include set-font-size($size);
 }
 
 // ====================================================
