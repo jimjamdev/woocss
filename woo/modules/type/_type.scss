@@ -2,10 +2,9 @@
 // Default Font Settings ==============================
 // ====================================================
 
-$base-font-color: #a0a0a0;
-$base-font-size: 16px;
-$base-line-height: 28px;
-$rhythm-unit: "rem";
+$base-font-color: #a0a0a0 !default;
+$base-font-size: 16px !default;
+$base-line-height: 28px !default;
 
 @include establish-baseline;
 
@@ -23,10 +22,9 @@ $rhythm-unit: "rem";
 
 html, body {
     font-family: $base-font-family;
-    //font-size: $base-font-size;
-    font-weight: $base-font-weight;
-    font-style: $base-font-style;
+    @include font-size($base-font-size);
     color: $base-font-color;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
