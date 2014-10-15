@@ -5,7 +5,7 @@
 $base-font-color: #a0a0a0 !default;
 $base-font-size: 16px !default;
 $base-line-height: 28px !default;
-$rhythm-unit "rem";
+$rhythm-unit 'rem';
 $rem-with-px-fallback true;
 
 @include establish-baseline;
