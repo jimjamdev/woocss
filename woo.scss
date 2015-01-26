@@ -1,0 +1,11 @@
+// Import WOOCSS base
+@import "woo/base";
+
+nav.menu {
+    @include menu;
+}
+
+nav.menu3 {
+    @include menu;
+}
+
