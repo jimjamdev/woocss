@@ -4,11 +4,11 @@
 @import "vars/vars";
 
 // Third party libs
-@import "../app/bower_components/sassanimation/sassanimation";
+@import "../../sassanimation/sassanimation";
 
-@import "../app/bower_components/compass-libsass/compass";
+@import "../../compass-libsass/compass";
 
-@import "../app/bower_components/susy/sass/susy";
+@import "../../susy/sass/susy";
 
 // Reset first
 @import "reset";

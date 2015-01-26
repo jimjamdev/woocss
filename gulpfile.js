@@ -38,11 +38,6 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', ['woo'], function () {
     return gulp.src('app/styles/*.scss')
-        //.pipe($.rubySass({
-            //style: 'compressed',
-            //precision: 10,
-            //sourcemap: true
-       //}))
         .pipe(sass())
         .pipe($.autoprefixer('last 3 version'))
         .pipe(uncss({
