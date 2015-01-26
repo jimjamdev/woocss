@@ -39,7 +39,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/*.scss')
-        .pipe(wait(500))
+        .pipe(wait(250))
         .pipe(sass())
         .pipe($.autoprefixer('last 3 version'))
         .pipe(uncss({

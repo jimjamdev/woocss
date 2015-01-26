@@ -3,12 +3,12 @@
     min-height: 80px;
     background-color: $gray;
     &__logo {
-        @include span(3);
-        background: yellow;
+        @include span(2);
+        background: red;
     }
     &__nav {
-        @include span(9);
+        @include span(10);
         @include last;
-        background: red;
+        background: yellow;
     }
 }
