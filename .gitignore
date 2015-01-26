@@ -5,7 +5,9 @@ tmp/
 vendor/
 bower_components/
 node_modules/
-app/*
+app/bower_components
+app/
+dist/
 build/
 .sass-cache
 *.tmp

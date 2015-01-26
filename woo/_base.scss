@@ -4,14 +4,12 @@
 @import "vars/vars";
 
 // Third party libs
-@import "../../sassanimation/sassanimation";
+@import "../bower_components/sassanimation/sassanimation";
 
-@import "../../compass-libsass/compass";
+@import "../bower_components/compass-libsass/compass";
 
-//@import "../../susyone-libsass/susy";
-//@import "../../modular-scale/stylesheets/modular-scale";
-
-//@import "../../thoughtbot-refills/source/stylesheets/all";
+@import "../bower_components/susy/sass/susy";
+//@import "../bower_components/breakpoint/stylesheets/breakpoint";
 
 // Reset first
 @import "reset";

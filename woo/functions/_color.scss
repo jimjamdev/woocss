@@ -78,12 +78,29 @@
 }
 
 @function set-color($color) {
-    @if lightness($color) > 50 {
-        @return #000000;
-        // Lighter backgorund, return dark color
+    @if lightness($color) > 100 {
+        @return darken($color, 30%);
+    }
+    @if lightness($color) > 85 {
+        @return darken($color, 30%);
+    }
+    @else if lightness($color) > 75 {
+        @return darken($color, 30%);
+    }
+    @else if lightness($color) > 65 {
+        @return lighten($color, 35%);  
+    }
+    @else if lightness($color) > 45 {
+        // buttons
+        @return lighten($color, 38%);
+    }
+    @else if lightness($color) > 35 {
+        @return lighten($color, 35%);
+    }
+    @else if lightness($color) > 0 {
+        @return lighten($color, 40%);
     }
     @else {
-        @return #ffffff;
-        // Darker background, return light color
+        @return red;
     }
 }

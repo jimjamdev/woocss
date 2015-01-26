@@ -1,0 +1,45 @@
+.modal {
+    @extend %base-background;
+    @extend %base-shadow;
+    @extend %base-border-radius;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 650px;
+    margin: 40px auto;
+    position: relative;
+}
+
+// Animation
+
+.modal-animate {
+    /* start state */
+    & .modal {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.3);
+    }
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    /* animate in */
+    &.mfp-ready {
+        .modal {
+            opacity: 1;
+            transform: scale(1);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+    /* animate out */
+    &.mfp-removing {
+        .modal {
+            transform: scale(1.3);
+            opacity: 0;
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}

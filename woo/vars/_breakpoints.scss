@@ -1,46 +1,94 @@
-$mobile: 35em;
-$mobile-only: max-width 35em;
-$tablet: 35em;
-$tablet-vertical: 63em;
-$desktop: 63em;
-$desktop-large: 80em;
+/*
+ $mobile:max-width 25em;
+ $tablet:35em;
+ $tablet-vertical:63em;
+ $desktop:63em;
+ $desktop-large:80em;
 
 @mixin mobile {
     @include breakpoint($mobile) {
         @content;
+
     }
 }
-
 @mixin mobile-only {
     @include breakpoint($mobile-only) {
         @content;
+
     }
 }
-
 @mixin tablet {
     @include breakpoint($tablet) {
         @content;
+
+    }
+}
+@mixin tablet-vert {
+    @include breakpoint($tablet-vertical) {
+        @content;
+
+    }
+}
+@mixin desktop {
+    @include breakpoint($desktop) {
+        @content;
+
+    }
+    .oldie & {
+        @content;
+
+    }
+}
+@mixin desktop-large {
+    @include breakpoint($desktop-large) {
+        @content;
+
     }
 }
 
-@mixin tablet-vert {
-    @include breakpoint($tablet-vertical) {
+*/
+
+// New susy libsass grid
+
+$device-small: 0em 40em;
+
+// Mobile
+$device-medium: 40.063em;
+
+// Tablet
+$device-large: 64em;
+
+// Desktop
+$device-xlarge: 90em;
+
+// Large Desktop
+
+@mixin small {
+    @include susy-media($device-small) {
         @content;
     }
 }
 
-@mixin desktop {
-    @include breakpoint($desktop) {
+@mixin medium {
+    @include susy-media($device-medium) {
+        @content;
+    }
+}
+
+@mixin large {
+    @include susy-media($device-large) {
         @content;
     }
 
     .oldie & {
         @content;
+        // We want to show this for the older IE8 browser that doesnt support media queries.
+   
     }
 }
 
-@mixin desktop-large {
-    @include breakpoint($desktop-large) {
+@mixin xlarge {
+    @include susy-media($device-xlarge) {
         @content;
     }
 }

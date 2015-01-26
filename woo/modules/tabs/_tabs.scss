@@ -1,0 +1,52 @@
+$tab-text-color-active: darken($gray, 60%) !default;
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    @extend %margin-vertical;
+    // %margin-bottom
+    .tab {
+        display: block;
+        clear: both;
+        @include large {
+            display: inline;
+            clear: none;
+        } 
+    }
+    .tab-link {
+        display: block;
+        text-decoration: none;
+        @extend %base-text-color;
+        cursor: pointer; 
+        @include large { 
+            display: inline-block;
+        }
+
+        @extend %padding;
+        border-top-left-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+        @extend %base-body-background;
+        @extend %base-border;
+        border-bottom-color: $gray; 
+        margin-bottom: -1px;
+        &.active { 
+            @extend %base-text-color;
+            @extend %base-background;
+        }
+    }
+    .tab-content {
+        @extend %padding-horizontal;
+        @extend %base-background;
+        float: left;
+        display: none;
+        @extend %base-border;
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        @extend %base-shadow;
+        .active { 
+            display: block; 
+        }
+    }
+}

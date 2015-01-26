@@ -1,0 +1,74 @@
+/* Modified from refills.bourbon.io
+<div class="tooltip">
+  Hover for Tooltip
+  <div class="tooltip__content">
+    <p>Lorem ipsum doldae oluptate aperiam unde voluptates quas.</p>
+  </div>
+</div>
+*/
+
+.tooltip {
+    ///////////////////////////////////////////////////////////////////////////////////
+    $dark-gray: #333 !default;
+    p {
+        color: $base-font-color;
+        line-height: $base-line-height;
+        margin: 0;
+    }
+    //////////////////////////////////////////////////////////////////////////////////
+    $tooltip-background: $base-background;
+    $tooltip-color: $base-font-color;
+    $tooltip-max-width: 16em;
+    $tooltip-arrow-width: 8px;
+    $tooltip-shadow: 0 2px 2px silver;
+    $tooltip-distance-from-item: 4em;
+    $tooltip-arrow-distance-from-box: -1.3em;
+    // css
+    background: $tooltip-background;
+    border-radius: $base-border-radius;
+    border: 1px solid $base-border-color;
+    display: inline-block;
+    padding: 0.5em 1em;
+    position: relative;
+    text-align: center;
+    &:hover .tooltip__content {
+        opacity: 1;
+        visibility: visible;
+    }
+    .tooltip__content {
+        position: absolute;
+        right: 0;
+        bottom: $tooltip-distance-from-item;
+        left: 0;
+        transition: all 0.2s ease-in-out;
+        background-color: $base-background;
+        background: #fff;
+        border-radius: $base-border-radius;
+        box-shadow: $tooltip-shadow;
+        color: $tooltip-color;
+        font-size: 0.9em;
+        border: 1px solid $base-border-color;
+        line-height: 1.5em;
+        margin: 0 auto;
+        max-width: $tooltip-max-width;
+        opacity: 0;
+        padding: 1em;
+        text-align: center;
+        visibility: hidden;
+        z-index: 10;
+        p {
+            margin-bottom: 0;
+        }
+        &:after {
+            @extend %arrow-down;
+            position: absolute;
+            right: 0;
+            left: 0;
+            color: #fff;
+            font-size: 18px;
+            border: $tooltip-arrow-width solid transparent;
+            bottom: $tooltip-arrow-distance-from-box;
+            text-shadow: $tooltip-shadow;
+        }
+    }
+}

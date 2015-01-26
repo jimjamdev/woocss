@@ -1,15 +1,55 @@
 // ====================================================
-// Base Values ========================================
+// Base Font Values ===================================
 // ====================================================
 
 $base-font-size: 16px !default;
-$base-line-height: 28px !default;
+$base-line-height: 24px !default;
 $base-font-family: $arial !default;
 $base-font-color: #555555 !default;
 $base-font-style: normal !default;
 $base-font-weight: 400 !default;
+
+// ====================================================
+// Base Theme Values ==================================
+// ====================================================
+
+$base-background-color: #efefef !default;
+$base-background: $base-background-color !default;
+$base-module-background-color: $gray !default;
+$base-text-color: $base-font-color !default;
+$base-border-color: darken($gray, 5%) !default;
+$base-border-style: solid !default;
+$base-border-radius: 3px !default;
+$base-border-width: 1px !default;
+
 $default-padding: 10px !default;
 $default-margin: $default-padding !default;
+$default-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+$base-padding: 10px !default;
+
+// Extends for base theming of components 
+%base-body-background {
+    background-color: $base-background;   
+}
+%base-background {
+    background: $base-module-background-color;
+}
+%base-text-color {
+    color: $base-text-color;
+}
+%base-border {
+    border: $base-border-style $base-border-width $base-border-color;
+}
+%base-border-radius {
+    border-radius: $base-border-radius;
+}
+%base-padding {
+    padding: $base-padding;
+}
+%base-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
 // ====================================================
 // Buttons ============================================

@@ -1,0 +1,30 @@
+@mixin card {
+    box-shadow: $default-shadow;
+    margin-bottom: $default-margin;
+    &__image {
+        & img {
+            @extend .responsive;
+        }
+    }
+    &__header {
+        padding: $default-padding;
+        border-bottom: solid 1px $base-border-color;
+        h1, h2, h3 {
+            margin: 0;
+        }
+    }
+    &__content {
+        padding: 0 $default-padding;
+        font-size: 0.9rem;
+    }
+    &__footer {
+        padding: $default-padding;
+        border-top: solid 1px $base-border-color;
+        ul, li {
+            @extend %reset;
+        }
+        & li {
+            display: inline-block;
+        }
+    }
+}

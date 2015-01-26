@@ -6,14 +6,14 @@
 //
 // =============================================================
 
-$black:  #000;
-$white:  #fff;
-$gray:   #e2e2e2;
-$blue:   #5eb8ce;
+$black: #000;
+$white: #fff;
+$gray: #e2e2e2;
+$blue: #5eb8ce;
 $orange: #f39c12;
-$green:  #61bb46;
+$green: #61bb46;
 $yellow: #f8ac1e;
-$red:    #fe624e;
+$red: #fe624e;
 
 //flatuicolors.com
 $turquoise: #1abc9c;
@@ -39,9 +39,10 @@ $asbestos: #7f8c8d;
 // Feedback
 
 $success: $green;
-$warning: $yellow;
+$warning: $sunflower;
 $danger: $red;
 
 $base-color: $red !default;
 $alt-color: complement($base-color) !default;
+
 //$alt-color: invert($base-color) !default;
