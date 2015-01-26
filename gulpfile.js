@@ -36,7 +36,7 @@ gulp.task('browser-sync', function() {
 });
 */
 
-gulp.task('styles', ['woo'], function () {
+gulp.task('styles', function () {
     return gulp.src('app/styles/*.scss')
         .pipe(sass())
         .pipe($.autoprefixer('last 3 version'))
@@ -188,8 +188,9 @@ gulp.task('woo', function() {
 
 gulp.task('watch', ['browser-sync'], function () {
 
-    gulp.watch('app/**/**/*.scss', ['styles']);
-    gulp.watch('app/woo/**/**/*.scss', ['styles']);
+    gulp.watch('woo/**/**/*.scss', ['woo']);
+    gulp.watch('app/bower_components/**/**/*.scss', ['styles']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('app/svg/**/*.svg', ['svg']);

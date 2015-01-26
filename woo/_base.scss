@@ -8,7 +8,7 @@
 
 @import "../../compass-libsass/compass";
 
-@import "../../susy/sass/susy";
+@import "../../susy/sass/susy"; 
 
 // Reset first
 @import "reset";
@@ -23,6 +23,6 @@
 @import "print";
 
 // Turns on debug. $debug=true;
-$debug: false !default;
+$debug: false !default; 
 
 @import "debug";
