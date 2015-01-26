@@ -1,0 +1,50 @@
+// ====================================================
+// Twinner Spinner ====================================
+// Usage: .loader { @extend %twinner-spinner; }
+// ====================================================
+
+
+// Extender
+%twinner-spinner {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    &:before, &:after {
+        content: "";
+        top: 0;
+        display: block;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        border-color: transparent;
+        box-sizing: border-box;
+        border-radius: 1em;
+    }
+    &:after {
+        left: 0;
+    }
+    &:before {
+        right: 0;
+    }
+}
+
+// Mixin
+@mixin twinner-spinner($loader-size: 150px, $loader-width: 0.5em, $loader-color: $green, $loader-speed: 1s, $loader-style: double) {
+    font-size: $loader-size;
+    @media (max-width: $loader-size * 1.5), (max-height: $loader-size * 1.5) {
+        font-size: $loader-size / 2;
+    }
+    &:before, &:after {
+        border-width: $loader-width;
+        border-style: $loader-style;
+        animation: spin $loader-speed infinite;
+    }
+    &:after {
+        border-left-color: $loader-color;
+    }
+    &:before {
+        border-right-color: $loader-color;
+        animation-delay: $loader-speed / -4;
+    }
+    @extend %twinner-spinner;
+}

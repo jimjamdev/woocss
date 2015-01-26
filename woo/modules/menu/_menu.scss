@@ -1,108 +1,334 @@
-@mixin menu {
-    background: $orange;
-    @extend %menu;
+// =============================================================
+//
+// menu.scss
+// Main style for menus. This doesn't include the header, but just the core menu
+// Author: Ian Jamieson
+//
+// =============================================================
+
+// Vars
+
+
+$default-menu-height: 80px !default;
+$default-menu-animation: fadeInUp !default;
+
+// fadeInUp, Fade
+
+$default-toplevel-font-size: 16px !default;
+$default-toplevel-padding: 16px !default;
+$default-toplevel-anim-speed: 0.5s !default;
+
+// Top Level
+$default-toplevel-link-color: $gray-dark !default;
+$default-toplevel-link-color-hover: $gray-light !default;
+$default-toplevel-link-color-active: $gray-light !default;
+
+$default-toplevel-bg-color: $white !default;
+$default-toplevel-bg-color-hover: darken($white, 3%) !default;
+$default-toplevel-bg-color-active: darken($white, 5%) !default;
+
+// Sub Level
+$default-sublevel-font-size: 14px !default;
+$default-sublevel-padding: 6px !default;
+$default-sublevel-width: 220px !default;
+$default-sublevel-anim-speed: 0.3s !default;
+
+$default-sublevel-link-color: $gray-darker !default;
+$default-sublevel-link-color-hover: $gray-dark !default;
+$default-sublevel-link-color-active: $white !default;
+
+$default-sublevel-bg-color: $white !default;
+$default-sublevel-bg-color-hover: $gray-light !default;
+$default-sublevel-bg-color-active: $yellow !default;
+
+// Keyframes
+
+@if $default-menu-animation == "fadeInUp" {
+    @-webkit-keyframes menuIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: TranslateY(20px);
+            transform: TranslateY(20px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: TranslateY(0);
+            transform: TranslateY(0);
+        }
+    }
+
+    @keyframes menuIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: TranslateY(20px);
+            -ms-transform: TranslateY(20px);
+            transform: TranslateY(20px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: TranslateY(0);
+            -ms-transform: TranslateY(0);
+            transform: TranslateY(0);
+        }
+    }
+
+    // Fade out
+    @-webkit-keyframes menuOut {
+        0% {
+            opacity: 1;
+            -webkit-transform: TranslateY(0px);
+            transform: TranslateY(0px);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: TranslateY(20px);
+            transform: TranslateY(20px);
+        }
+    }
+
+    @keyframes menuOut {
+        0% {
+            opacity: 1;
+            -webkit-transform: TranslateY(0px);
+            -ms-transform: TranslateY(0px);
+            transform: TranslateY(0px);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: TranslateY(20px);
+            -ms-transform: TranslateY(20px);
+            transform: TranslateY(20px);
+        }
+    }
 }
 
-%menu {
-    @extend %clearfix;
-    //min-height: 50px;
-    .container {
-        position: relative;
-    }
-    ul, li {
-        @extend %reset; 
-    }
-    .sub-menu {
-        height: 55px;
-        // Default link colors
-        a {
-            display: block;
-            padding: 1em;
-            color: $white;
-            text-decoration: none;
-            height: 55px;
+@if $default-menu-animation == "fade" {
+    @-webkit-keyframes menuIn {
+        0% {
+            opacity: 0;
         }
-        // Default hover
-        li {
-            position: relative; 
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes menuIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    // Fade out
+    @-webkit-keyframes menuOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes menuOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+//-- new --
+%menu {
+    @extend %reset;
+    @extend %animate;
+    display: inline-block;
+    // Globals
+    & li {
+        @extend %animate;
+        position: relative;
+        & a {
+            @extend %animate;
             display: block;
-            height: 55px;
-            &:hover > {
-                a {
-                    background: lighten($orange, 10%);
-                    background: rgba($white, 0.1);
-                }
+        }
+        &:hover {
+            // Show submenu on hover
+            & > ul {
+                visibility: visible;
             }
         }
-        // if has dropdown
-        li.has-dropdown {
-            &.wide {
-                position: static;
-                .drop-down-menu {
-                    min-width: 100%;
-                    width: 100%;
-                }
+    }
+    // Parent only
+    & > li {
+        @extend %reset;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        font-family: inherit;
+        & > a {
+            display: block;
+        }
+        // Extra wide menu with sub menus open
+        &.super--dropdown {
+            position: inherit;
+            > ul {
+                clear: both;
+                width: 100%;
+            }
+            ul ul {
+                position: relative;
+                left: 0;
+                width: 100%;
+                -webkit-animation-name: menuIn;
             }
             &:hover {
-                .drop-down-menu {
-                    display: block;
-                    opacity: 1;
-                }
-            }
-        }
-        // Dropdown menu styles
-        .drop-down-menu {
-            position: absolute;
-            top: 55px;
-            left: 0;
-            min-width: 200px;
-            display: none;
-            z-index: 999;
-            background: $white;
-            border: solid 1px $gray;
-            a {
-                padding: 0.5em;
-                color: $orange;
-            }
-            .parent {
-                a {
-                    color: $black; 
+                // Show submenu on hover
+                & ul {
+                    visibility: visible;
                 }
             }
             li {
-                display: block;
-                padding: 0;
-                width: 100%;
-                height: 40px;
-                background: $white;
-                &:hover > {
-                    a {
-                        background: lighten($gray, 10%);
-                        background: rgba($gray, 0.5);
-                    }
+                // Parent
+                width: 25%;
+                float: left;
+                & li {
+                    width: 100%;
                 }
             }
         }
-        select {
-            border: solid 7px $orange;
+        // ---------
+   
+    }
+    // Drop Down Menu
+    & ul {
+        @extend %reset;
+        position: absolute;
+        left: 0;
+        z-index: 999;
+        visibility: hidden;
+        // Hide by default
+        & > li {
+            @extend %reset;
+            text-align: left;
         }
+    }
+    // Subsub
+    & ul ul {
+        top: 0;
     }
 }
 
-// Mobile select tweek
-
-.block__sub-menu ul.sub-menu li {
-    display: none;
-}
-
-.block__sub-menu ul.sub-menu {
-    @include desktop {
-        li {
-            display: inline-block;
+@mixin menu(
+    $menu-height: $default-menu-height,
+    $menu-animation: $default-menu-animation,
+    $toplevel-font-size: $default-toplevel-font-size,
+    $toplevel-padding: $default-toplevel-padding,
+    $toplevel-anim-speed: $default-toplevel-anim-speed,
+    $toplevel-link-color: $default-toplevel-link-color,
+    $toplevel-link-color-hover: $default-toplevel-link-color-hover,
+    $toplevel-link-color-active: $default-toplevel-link-color-active,
+    $toplevel-bg-color: $default-toplevel-bg-color,
+    $toplevel-bg-color-hover: $default-toplevel-bg-color-hover,
+    $toplevel-bg-color-active: $default-toplevel-bg-color-active,
+    $sublevel-font-size: $default-sublevel-font-size,
+    $sublevel-padding: $default-sublevel-padding,
+    $sublevel-width: $default-sublevel-width,
+    $sublevel-anim-speed: $default-sublevel-anim-speed,
+    $sublevel-link-color: $default-sublevel-link-color,
+    $sublevel-link-color-hover: $default-sublevel-link-color-hover,
+    $sublevel-link-color-active: $default-sublevel-link-color-active,
+    $sublevel-bg-color: $default-sublevel-bg-color,
+    $sublevel-bg-color-hover: $default-sublevel-bg-color-hover,
+    $sublevel-bg-color-active: $default-sublevel-bg-color-active
+    ) 
+    {
+    height: $menu-height;
+    // Animation
+    & li {
+        transition: all $sublevel-anim-speed;
+        &:hover {
+            > ul {
+                transition: all $sublevel-anim-speed;
+                -webkit-animation-name: menuIn;
+                -webkit-animation-duration: $sublevel-anim-speed;
+                -webkit-animation-delay: 0s;
+                -webkit-animation-timing-function: ease;
+                -webkit-animation-fill-mode: both;
+            }
         }
-        select {
-            display: none;
+        & ul {
+            -webkit-animation-name: menuOut;
+            -webkit-animation-duration: $sublevel-anim-speed;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: both;
         }
     }
+    & ul {
+        width: $sublevel-width;
+    }
+    // Parent only
+    & > li {
+        height: $menu-height;
+        background-color: $toplevel-bg-color;
+        & > a {
+            @include rem($toplevel-font-size);
+            height: $menu-height;
+            padding: 0 $toplevel-padding;
+            padding: 0 calculateRem($toplevel-padding);
+            line-height: $menu-height;
+            color: $toplevel-link-color;
+        }
+        &:hover {
+            background-color: $toplevel-bg-color-hover;
+            & > a {
+                color: $toplevel-link-color-hover;
+            }
+        }
+        &--active {
+            background-color: $toplevel-bg-color-active;
+            & > a {
+                color: $toplevel-link-color-active;
+            }
+        }
+    }
+    // Drop Down Menu
+    & ul {
+        background-color: $sublevel-bg-color;
+        & li {
+            background-color: $sublevel-bg-color;
+            & a {
+                @include rem($sublevel-font-size);
+                padding: $sublevel-padding;
+                padding: calculateRem($sublevel-padding);
+                color: $sublevel-link-color;
+            }
+            &:hover {
+                background-color: $sublevel-bg-color-hover;
+                & > a {
+                    color: $sublevel-link-color-hover;
+                }
+            }
+            &.active {
+                background-color: $sublevel-bg-color-active;
+                & > a {
+                    color: $sublevel-link-color-active;
+                }
+            }
+        }
+    }
+    & ul ul {
+        left: $sublevel-width;
+    }
+    @extend %menu;
 }
 
+
+
+
+
+//-------

@@ -1,4 +1,6 @@
-// Clearfix helper ###################
+// ====================================================
+// Clearfix ===========================================
+// ====================================================
 
 %clearfix, .clearfix {
     zoom: 1;
@@ -13,14 +15,16 @@
     }
 }
 
-// Hide ############################
+// ====================================================
+// Hide ===============================================
+// ====================================================
 
-%hidden {
+%hidden, .hidden {
     display: none !important;
     visibility: hidden;
 }
 
-%visually-hidden {
+%visually-hidden, .visibility--hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -40,11 +44,13 @@
     }
 }
 
-%invisible {
+%invisible, .invisible {
     visibility: hidden;
 }
 
-// Reset ############################
+// ====================================================
+// Reset ==============================================
+// ====================================================
 
 %reset {
     margin: 0;
@@ -52,24 +58,188 @@
     list-style: none;
 }
 
-// Opacity ##########################
+// ====================================================
+// Opacity ============================================
+// ====================================================
 
 @mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie);
+    //IE8
 }
 
-// Text Layout helpers ##############
+// ====================================================
+// Text Alignment =====================================
+// ====================================================
 
-%text-left, .text-left {
-	text-align: left;
+%text-left,
+.text--left {
+    text-align: left;
 }
 
-%text-right, .text-right {
-	text-align: right;
+%text-right,
+.text--right {
+    text-align: right;
 }
 
-%text-center, .text-center {
-	text-align: center;
+%text-center,
+.text--center {
+    text-align: center;
+}
+
+%text-justify,
+.text--justify {
+    text-align: justify;
+}
+
+%float-left,
+.float--left {
+    float: left;
+}
+
+%float-right,
+.float--right {
+    float: right;
+}
+
+%float-none,
+.float--none {
+    float: none;
+}
+
+// ====================================================
+// Padding ============================================
+// ====================================================
+%padding {
+    padding: $default-padding;
+}
+
+%padding-vertical {
+    padding-top: $default-padding;
+    padding-bottom: $default-padding;
+}
+
+%padding-horizontal {
+    padding-left: $default-padding;
+    padding-right: $default-padding;
+}
+
+%padding-top {
+    padding-top: $default-padding;
+}
+
+%padding-right {
+    padding-right: $default-padding;
+}
+
+%padding-bottom {
+    padding-bottom: $default-padding;
+}
+
+%padding-left {
+    padding-left: $default-padding;
+}
+
+// ====================================================
+// Margin ============================================
+// ====================================================
+
+%margin {
+    margin: $default-padding;
+}
+
+%margin-vertical {
+    margin-top: $default-padding;
+    margin-bottom: $default-padding;
+}
+
+%margin-horizontal {
+    margin-left: $default-padding;
+    margin-right: $default-padding;
+}
+
+%margin-top {
+    margin-top: $default-padding;
+}
+
+%margin-right {
+    margin-right: $default-padding;
+}
+
+%margin-bottom {
+    margin-bottom: $default-padding;
+}
+
+%margin-left {
+    margin-left: $default-padding;
+}
+
+// ====================================================
+// Blocks =============================================
+// ====================================================
+%block,
+.block {
+    display: block;
+}
+
+%inline-block,
+.inline--block {
+    display: inline-block;
+}
+
+// ====================================================
+// Default Animation ==================================
+// ====================================================
+
+%animate {
+    transition: .3s ease-in-out;
+}
+
+// ====================================================
+// Background Defaults ================================
+// ====================================================
+
+%default-background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+// ====================================================
+// Layout helpers =====================================
+// ====================================================
+
+%fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+%fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+%absolute {
+    position: absolute;
+    width: 100%;
+}
+
+%full-height {
+    height: 100%;
+    min-height: 100%;
+}
+
+%full-screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

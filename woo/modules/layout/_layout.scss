@@ -1,2 +1,19 @@
-@import "bem";
-@import "centered";
+
+// ====================================================
+// Center content =====================================
+// ====================================================
+
+@mixin centered ($inner...) {
+
+  display: table;
+  width: 100%;
+
+  $inner: if(length($inner) == 0, ".content__centered", $inner);
+  @each $cell-selector in $inner {
+    & > #{$cell-selector} {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+}

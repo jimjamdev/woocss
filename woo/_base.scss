@@ -1,21 +1,31 @@
 /*! woocss.com by Ian Jamieson @ cogocreative.com */
 
-// Third party libs
-@import "libs/susy/sass/susy";
-@import "libs/breakpoint/stylesheets/breakpoint";
-
-// Reset first 
-@import "reset";
-
-// External woocss libs
-@import "libs/sassanimation/sassanimation";
-@import "libs/sassbuttons/sassbuttons";
-
 // Base Variables
 @import "vars/vars";
+
+// Third party libs
+@import "../../sassanimation/sassanimation";
+
+@import "../../compass-libsass/compass";
+
+//@import "../../susyone-libsass/susy";
+//@import "../../modular-scale/stylesheets/modular-scale";
+
+//@import "../../thoughtbot-refills/source/stylesheets/all";
+
+// Reset first
+@import "reset";
+
+// Functions
+@import "functions/functions";
 
 // Modules
 @import "modules/modules";
 
 // Print styles
 @import "print";
+
+// Turns on debug. $debug=true;
+$debug: false !default;
+
+@import "debug";

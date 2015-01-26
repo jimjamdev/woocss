@@ -5,11 +5,9 @@
 // Author: Ian Jamieson
 //
 // =============================================================
-
-@include global-box-sizing(border-box); 
-
-$susy: (
-  columns: 12,  // The number of columns in your grid
-  gutters: 1/4, // The size of a gutter in relation to a single column
-  gutter-position: inside, // before | after | split | inside | inside-static
-);
+/*
+$total-columns: 12 !default;
+$column-width: 6em !default;
+$gutter-width: 1em !default;
+$grid-padding: $gutter-width !default;
+*/

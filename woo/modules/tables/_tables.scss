@@ -1,0 +1,42 @@
+// Table defaults
+%table {
+    border-collapse: collapse; 
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+// Table mixin
+@mixin table($default-table-header-bg, $default-table-row-bg, $default-table-row-bg-alt, $default-table-row-bg-hover, $default-table-padding) {
+    thead {
+        background: $default-table-header-bg;
+    }
+    th {
+        padding: ($default-table-padding * 1.5);
+        background: $default-table-header-bg;
+        color: set-title-color($default-table-header-bg);
+        font-weight: normal;
+    }
+    tbody {
+        font-size: 90%;
+    }
+    tr {
+        background: $default-table-row-bg;
+        color: set-text-color($default-table-row-bg);
+        &:hover {
+            background: $default-table-row-bg-hover;
+            color: set-text-color($default-table-row-bg-hover);
+        }
+        &:nth-child(2n+1) {
+            background: $default-table-row-bg-alt;
+            color: set-text-color($default-table-row-bg-alt);
+            &:hover {
+              background: set-background-color($default-table-row-bg-alt);
+              color: set-text-color($default-table-row-bg-alt);
+            }
+        }
+    }
+    td {
+        padding: $default-table-padding;
+    }
+    @extend %table;
+}

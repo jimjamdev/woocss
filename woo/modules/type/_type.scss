@@ -1,1 +1,58 @@
-@import "sizes";
+// ====================================================
+// Default Font Settings ==============================
+// ====================================================
+
+$base-font-color: #a0a0a0 !default;
+$base-font-size: 16px !default;
+$base-line-height: 28px !default;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+@include establish-baseline;
+
+// ====================================================
+// Mixins =============================================
+// ====================================================
+
+@mixin font-size($size) {
+    @include adjust-font-size-to($size);
+}
+
+// ====================================================
+// Default Font Sizes ==============================
+// ====================================================
+
+html, body {
+    font-family: $base-font-family;
+    @include font-size($base-font-size);
+    color: $base-font-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+h1 {
+    @include font-size(28px);
+}
+
+h2 {
+    @include font-size(22px);
+}
+
+h3 {
+    @include font-size(18px);
+}
+
+h4 {
+    @include font-size(16px);
+}
+
+h5 {
+    @include font-size(14px);
+}
+
+h6 {
+    @include font-size(12px);
+}

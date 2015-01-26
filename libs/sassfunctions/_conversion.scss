@@ -1,7 +1,0 @@
-// Convert Px to Em.
-
-$base-font-size: 16px !default;
-
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}

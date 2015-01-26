@@ -1,1 +1,15 @@
-@import "responsive";
+img {
+	display: block;
+}
+
+%responsive, img.responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@mixin svg-image($image) {
+	background: transparent url(#{$image}.png) center center no-repeat;
+	background-image: linear-gradient(transparent, transparent), url(#{$image}.svg);
+}
