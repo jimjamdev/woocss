@@ -29,6 +29,7 @@
     "gulp-size": "^0.3.0",
     "gulp-svg2png": "^0.3.0",
     "gulp-svgmin": "^0.4.8",
+    "gulp-symlink": "^2.1.0",
     "gulp-uglify": "^0.2.1",
     "gulp-uncss": "^0.5.1",
     "gulp-useref": "^0.4.2",

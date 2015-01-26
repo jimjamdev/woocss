@@ -8,10 +8,9 @@ $device-medium: 40.063em;
 // Tablet
 $device-large: 64em;
 
-// Desktop
+// Large Desktop
 $device-xlarge: 90em;
 
-// Large Desktop
 
 @mixin small {
     @include susy-media($device-small) {

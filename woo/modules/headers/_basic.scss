@@ -2,4 +2,13 @@
     display: block;
     min-height: 80px;
     background-color: $gray;
+    &__logo {
+        @include span(3);
+        background: yellow;
+    }
+    &__nav {
+        @include span(9);
+        @include last;
+        background: red;
+    }
 }
