@@ -21,11 +21,9 @@
   "dependencies": {
       "jquery-legacy": "jquery#1.11.1",
       "jquery": "jquery#2.1.1",
-      "angular": "*",
       "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
       "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
       "susy": "https://github.com/ericam/susy.git",
-      "breakpoint": "https://github.com/at-import/breakpoint.git",
       "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
       "slick": "https://github.com/kenwheeler/slick.git",
       "magnific-popup": "~0.9.9"
