@@ -36,7 +36,7 @@ gulp.task('browser-sync', function() {
 });
 */
 
-gulp.task('styles', function () {
+gulp.task('styles', ['woo'], function () {
     return gulp.src('app/styles/*.scss')
         //.pipe($.rubySass({
             //style: 'compressed',
@@ -184,8 +184,10 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('woo', function() {
-    gulp.src('app/woo/**/*')
-    .pipe(gulp.dest('woo'));
+     gulp.src('woo/**/*')
+    .pipe(gulp.dest('app/bower_components/woocss/woo'));
+    gulp.src('_woo.scss')
+    .pipe(gulp.dest('app/bower_components/woocss/'));
 });
 
 
