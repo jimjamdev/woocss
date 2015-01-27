@@ -18,6 +18,8 @@ var minifyHTML = require('gulp-minify-html');
 var fileinclude = require('gulp-file-include');
 var cssmin = require('gulp-cssmin');
 var wait = require('gulp-wait');
+var concat = require('gulp-concat');
+var concatcss = require('gulp-concat-css');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function () {
@@ -37,9 +39,22 @@ gulp.task('browser-sync', function() {
 });
 */
 
+gulp.task('css', ['styles'], function () {
+    gulp.src(['app/styles/main.css', 'app/styles/fonts.css'], {
+            base: './'
+        })
+        .pipe(concatcss('main.bundle.css'))
+        .pipe(cssmin())
+        .pipe(gulp.dest('./app/styles'))
+        .pipe(gulp.dest('./dist/styles'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task('styles', function () {
     return gulp.src('app/styles/*.scss')
-        .pipe(wait(250))
+        .pipe(wait(500))
         .pipe(sass())
         .pipe($.autoprefixer('last 3 version'))
         .pipe(uncss({
@@ -58,6 +73,20 @@ gulp.task('styles', function () {
         }));
 });
 
+gulp.task('critical', ['build'], function () {
+    critical.generateInline({
+        base: 'dist/',
+        src: 'index.html',
+        css: ['app/styles/main.css'],
+        dest: 'styles/main.css',
+        htmlTarget: 'index.html',
+        width: 960,
+        height: 700,
+        minify: true
+    });
+});
+
+
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
         .pipe($.jshint())
@@ -68,14 +97,9 @@ gulp.task('scripts', function () {
         }));
 });
 
-gulp.task('minify-html', ['critical'], function () {
-    var opts = {};
-    gulp.src('dist/*.html')
-        .pipe(minifyHTML(opts))
-        .pipe(gulp.dest('dist'));
-});
 
-gulp.task('html', ['styles', 'scripts'], function () {
+
+gulp.task('html', ['css', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
@@ -117,7 +141,7 @@ gulp.task('svg', function () {
         .pipe(rename({
             extname: '.png'
         }))
-        .pipe(gulp.dest('app/images/svg/png'));
+        .pipe(gulp.dest('app/images/svg'));
 });
 
 
@@ -141,6 +165,8 @@ gulp.task('fonts', function () {
         .pipe($.size());
 });
 
+
+
 gulp.task('extras', function () {
     return gulp.src(['app/*.*', '!app/*.html'], {
             dot: true
@@ -154,19 +180,15 @@ gulp.task('clean', function () {
     }).pipe($.clean());
 });
 
+gulp.task('woobuild', ['critical'], function () {
+    var opts = {};
+    gulp.src('dist/*.html')
+        .pipe(minifyHTML(opts))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
-gulp.task('critical', ['build'], function () {
-    critical.generateInline({
-        base: 'dist/',
-        src: 'index.html',
-        dest: 'styles/main.css',
-        htmlTarget: 'index.html',
-        width: 1024,
-        height: 960,
-        minify: true
-    });
-});
 
 // Set default task on gulp. Previous "critical".
 gulp.task('default', ['clean'], function () {
@@ -200,8 +222,8 @@ gulp.task('woo', function () {
 gulp.task('watch', ['browser-sync'], function () {
 
     gulp.watch('woo/**/**/*.scss', ['woo']);
-    gulp.watch('app/bower_components/**/**/*.scss', ['styles']);
-    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/bower_components/**/**/*.scss', ['css']);
+    gulp.watch('app/styles/**/*.scss', ['css']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('app/svg/**/*.svg', ['svg']);
