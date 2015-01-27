@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'materialdesign';
-    src: url("/fonts/materialdesign.eot?-tm8rtz");
-    src: url("/fonts/materialdesign.eot?#iefix-tm8rtz") format("embedded-opentype"), url("/fonts/materialdesign.woff?-tm8rtz") format("woff"), url("/fonts/materialdesign.ttf?-tm8rtz") format("truetype"), url("/fonts/materialdesign.svg?-tm8rtz#materialdesign") format("svg");
+    src: url("../fonts/materialdesign.eot?-tm8rtz");
+    src: url("../fonts/materialdesign.eot?#iefix-tm8rtz") format("embedded-opentype"), url("../fonts/materialdesign.woff?-tm8rtz") format("woff"), url("../fonts/materialdesign.ttf?-tm8rtz") format("truetype"), url("../fonts/materialdesign.svg?-tm8rtz#materialdesign") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
-
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
     font-family: 'materialdesign';
     speak: none;
     font-style: normal;
@@ -16,6 +16,7 @@
     text-transform: none;
     line-height: 1;
     /* Better Font Rendering =========== */
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
