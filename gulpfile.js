@@ -81,7 +81,7 @@ gulp.task('critical', ['build'], function () {
         dest: 'styles/main.css',
         htmlTarget: 'index.html',
         width: 960,
-        height: 700,
+        height: 850,
         minify: true
     });
 });
