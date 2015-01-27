@@ -39,7 +39,7 @@ gulp.task('browser-sync', function() {
 });
 */
 
-gulp.task('css', ['copy-woo', 'styles'], function () {
+/*gulp.task('css', ['copy-woo', 'styles'], function () {
     gulp.src(['app/styles/main.css', 'app/styles/fonts.css'], {
             base: './'
         })
@@ -50,9 +50,9 @@ gulp.task('css', ['copy-woo', 'styles'], function () {
         .pipe(browserSync.reload({
             stream: true
         }));
-});
+});*/
 
-gulp.task('styles', ['copy-woo'], function () {
+gulp.task('styles', function () {
     return gulp.src('app/styles/*.scss')
         .pipe(wait(500))
         .pipe(sass())
@@ -221,7 +221,7 @@ gulp.task('copy-woo', function () {
 
 gulp.task('watch', ['browser-sync'], function () {
 
-    gulp.watch('woo/**/**/*.scss', ['woo']);
+    gulp.watch('woo/**/**/*.scss', ['copy-woo']);
     gulp.watch('app/bower_components/**/**/*.scss', ['styles']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
