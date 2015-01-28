@@ -181,7 +181,9 @@ gulp.task('clean', function () {
 });
 
 gulp.task('woobuild', ['critical'], function () {
-    var opts = {};
+    var opts = {
+        conditonals: true
+    };
     gulp.src('dist/*.html')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('dist'));
@@ -192,7 +194,7 @@ gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
 // Set default task on gulp. Previous "critical".
 gulp.task('default', ['clean'], function () {
-    gulp.start('html');
+    gulp.start('woobuild');
 });
 
 

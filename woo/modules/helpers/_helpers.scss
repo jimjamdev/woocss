@@ -1,8 +1,8 @@
 // ====================================================
 // Clearfix ===========================================
 // ====================================================
-
-%clearfix, .clearfix {
+%clearfix,
+.clearfix {
     zoom: 1;
     &:before, &:after {
         content: "\0020";
@@ -18,13 +18,14 @@
 // ====================================================
 // Hide ===============================================
 // ====================================================
-
-%hidden, .hidden {
+%hidden,
+.hidden {
     display: none !important;
     visibility: hidden;
 }
 
-%visually-hidden, .visibility--hidden {
+%visually-hidden,
+.visibility--hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -33,8 +34,7 @@
     padding: 0;
     position: absolute;
     width: 1px;
-    &.focusable:active,
-    &.focusable:focus {
+    &.focusable:active, &.focusable:focus {
         clip: auto;
         height: auto;
         margin: 0;
@@ -44,14 +44,14 @@
     }
 }
 
-%invisible, .invisible {
+%invisible,
+.invisible {
     visibility: hidden;
 }
 
 // ====================================================
 // Reset ==============================================
 // ====================================================
-
 %reset {
     margin: 0;
     padding: 0;
@@ -69,18 +69,16 @@
 // ====================================================
 // Opacity ============================================
 // ====================================================
-
 @mixin opacity($opacity) {
     opacity: $opacity;
     $opacity-ie: $opacity * 100;
-    filter: alpha(opacity = $opacity-ie);
+    filter: alpha(opacity $opacity-ie);
     //IE8
 }
 
 // ====================================================
 // Text Alignment =====================================
 // ====================================================
-
 %text-left,
 .text--left {
     text-align: left;
@@ -119,67 +117,73 @@
 // ====================================================
 // Padding ============================================
 // ====================================================
-%padding {
+%padding,
+.padding {
     padding: $default-padding;
 }
 
-%padding-vertical {
+%padding-vertical,
+.padding--vertical {
     padding-top: $default-padding;
     padding-bottom: $default-padding;
 }
 
-%padding-horizontal {
+%padding-horizontal,
+.padding--horizontal {
     padding-left: $default-padding;
     padding-right: $default-padding;
 }
 
-%padding-top {
+%padding-top,
+.padding--top {
     padding-top: $default-padding;
 }
 
-%padding-right {
+%padding-right,
+.padding--right {
     padding-right: $default-padding;
 }
 
-%padding-bottom {
+%padding-bottom,
+.padding--bottom {
     padding-bottom: $default-padding;
 }
 
-%padding-left {
+%padding-left,
+.padding--left {
     padding-left: $default-padding;
 }
 
 // ====================================================
 // Margin ============================================
 // ====================================================
-
-%margin {
+%margin, .margin {
     margin: $default-padding;
 }
 
-%margin-vertical {
+%margin-vertical, .margin--vertical {
     margin-top: $default-padding;
     margin-bottom: $default-padding;
 }
 
-%margin-horizontal {
+%margin-horizontal, .margin--horizontal {
     margin-left: $default-padding;
     margin-right: $default-padding;
 }
 
-%margin-top {
+%margin-top, .margin--top {
     margin-top: $default-padding;
 }
 
-%margin-right {
+%margin-right, .margin--right {
     margin-right: $default-padding;
 }
 
-%margin-bottom {
+%margin-bottom, .margin--bottom {
     margin-bottom: $default-padding;
 }
 
-%margin-left {
+%margin-left, .margin--left {
     margin-left: $default-padding;
 }
 
@@ -199,7 +203,6 @@
 // ====================================================
 // Default Animation ==================================
 // ====================================================
-
 %animate {
     transition: .3s ease-in-out;
 }
@@ -207,7 +210,6 @@
 // ====================================================
 // Background Defaults ================================
 // ====================================================
-
 %default-background-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -217,7 +219,6 @@
 // ====================================================
 // Layout helpers =====================================
 // ====================================================
-
 %fixed-top {
     position: fixed;
     top: 0;
@@ -255,21 +256,20 @@
 // ====================================================
 // Material Design Shadow =============================
 // ====================================================
-
 @mixin material-shadow($level: 1) {
-    @if $level == 1 {
+    @if $level= 1 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
-    @else if $level == 2 {
+    @else if $level= 2 {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
-    @else if $level == 3 {
+    @else if $level= 3 {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     }
-    @else if $level == 4 {
+    @else if $level= 4 {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
-    @else if $level == 5 {
+    @else if $level= 5 {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     }
 }
