@@ -1,8 +1,7 @@
 @import "../../../sass-mediaqueries/media-queries";
 // New susy libsass grid
-$device-xsmall: 0em 30em;
 // Mobile only
-$device-small: 0em 40em;
+$device-small: 40em;
 // Tablet
 $device-medium: 40.063em;
 // Desktop
@@ -10,7 +9,7 @@ $device-large: 64em;
 // Large Desktop
 $device-xlarge: 90em;
 @mixin xsmall {
-    @include max-screen($device-xsmall) {
+    @include max-screen($device-small) {
         @content;
     }
 }

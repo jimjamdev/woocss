@@ -4,9 +4,6 @@
     @extend %base-border;
     @extend %base-border-radius;
     margin: $default-margin 0;
-    @include ipad-retina {
-        font-size: 2em;
-    }
 }
 
 .alert--warning {

@@ -23,8 +23,8 @@
         float: right;
         .nav {
             float: right;
-            @include small {
-                display: none;
+            @include xsmall {
+                display: none; 
             }
         }
         .nav__mobile {
