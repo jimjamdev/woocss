@@ -1,14 +1,42 @@
 .header {
     display: block;
-    min-height: 80px;
     background-color: $gray;
+    // Icons
+    [class^="icon-"], [class*=" icon-"] {
+        font-size: 2em;
+    }
     &__logo {
-        @include span(2);
-        background: red;
+        display: inline-block;
+        width: 15%;
+        float: left;
+        // Size
+        & a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 13px 0px 13px 13px;
+        }
     }
     &__nav {
-        @include span(10);
-        @include last;
-        background: yellow;
+        display: inline-block;
+        width: 83%;
+        float: right;
+        .nav {
+            float:right;
+            @include small {
+                display: none;
+            }
+        }
+        .nav__mobile {
+            @include medium {
+                display: none;
+            }
+            text-align: right;
+            i {
+                display: block;
+                padding: 13px 0px 13px 13px;
+                cursor: pointer;
+            }
+        }
     }
 }

@@ -182,7 +182,7 @@ gulp.task('clean', function () {
 
 gulp.task('woobuild', ['critical'], function () {
     var opts = {
-        conditonals: true
+        conditionals: true
     };
     gulp.src('dist/*.html')
         .pipe(minifyHTML(opts))
@@ -220,9 +220,14 @@ gulp.task('copy-woo', function () {
         .pipe(gulp.dest('app/bower_components/woocss/woo'));
 });
 
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
 
 gulp.task('watch', ['browser-sync'], function () {
 
+    gulp.watch('app/**/*.html', ['bs-reload']);
     gulp.watch('woo/**/**/*.scss', ['copy-woo']);
     gulp.watch('app/bower_components/**/**/*.scss', ['styles']);
     gulp.watch('app/styles/**/*.scss', ['styles']);

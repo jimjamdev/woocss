@@ -12,6 +12,10 @@ $gutter-width: 1em !default;
 $grid-padding: $gutter-width !default;
 */
 
+$grid-columns: 12 !default;
+$grid-gutters: 0.75 !default;
 // Susy layouts
-$susy: (flow: ltr, columns: 12, gutters: 0.75);
-$inside: (columns: 12, gutters: 0.75, gutter-position: inside);
+$susy: (flow: ltr,
+columns: $grid-columns,
+gutters: $grid-gutters,
+gutter-position: inside);

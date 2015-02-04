@@ -1,1 +1,15 @@
-@mixin hero {}
+@mixin hero {
+    @extend %default-background-image;
+    background-color: $base-background-color;
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    @include centered(".hero__content");
+    min-height: 300px;
+    &--short {
+        min-height: 200px !important;
+    }
+    @include medium {
+        min-height: 500px;
+    }
+}

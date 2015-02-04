@@ -1,31 +1,32 @@
 {
-  "name": "WOOCSS",
-  "version": "0.1.0",
-  "authors": [
+    "name": "WOOCSS",
+    "version": "0.1.0",
+    "authors": [
     "Ian Jamieson <cogocreative@gmail.com>"
   ],
-  "description": "WooCss Packages",
-  "main": "woocss.css",
-  "keywords": [
+    "description": "WooCss Packages",
+    "main": "woocss.css",
+    "keywords": [
     "woocss"
   ],
-  "license": "MIT",
-  "homepage": "www.woocss.com",
-  "ignore": [
+    "license": "MIT",
+    "homepage": "www.woocss.com",
+    "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "dependencies": {
-      "jquery-legacy": "jquery#1.11.1",
-      "jquery-latest": "jquery#2.1.1",
-      "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
-      "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
-      "susy": "https://github.com/ericam/susy.git",
-      "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
-      "slick": "https://github.com/kenwheeler/slick.git",
-      "magnific-popup": "~0.9.9"
-  }
+    "dependencies": {
+        "jquery-legacy": "jquery#1.11.1",
+        "jquery-latest": "jquery#2.1.1",
+        "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
+        "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
+        "susy": "https://github.com/ericam/susy.git",
+        "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
+        "slick": "https://github.com/kenwheeler/slick.git",
+        "magnific-popup": "~0.9.9",
+        "lazyloadxt": "~1.0.5"
+    },
 }

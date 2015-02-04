@@ -1,334 +1,59 @@
-// =============================================================
-//
-// menu.scss
-// Main style for menus. This doesn't include the header, but just the core menu
-// Author: Ian Jamieson
-//
-// =============================================================
-
-// Vars
-
-
-$default-menu-height: 80px !default;
-$default-menu-animation: fadeInUp !default;
-
-// fadeInUp, Fade
-
-$default-toplevel-font-size: 16px !default;
-$default-toplevel-padding: 16px !default;
-$default-toplevel-anim-speed: 0.5s !default;
-
-// Top Level
-$default-toplevel-link-color: $gray-dark !default;
-$default-toplevel-link-color-hover: $gray-light !default;
-$default-toplevel-link-color-active: $gray-light !default;
-
-$default-toplevel-bg-color: $white !default;
-$default-toplevel-bg-color-hover: darken($white, 3%) !default;
-$default-toplevel-bg-color-active: darken($white, 5%) !default;
-
-// Sub Level
-$default-sublevel-font-size: 14px !default;
-$default-sublevel-padding: 6px !default;
-$default-sublevel-width: 220px !default;
-$default-sublevel-anim-speed: 0.3s !default;
-
-$default-sublevel-link-color: $gray-darker !default;
-$default-sublevel-link-color-hover: $gray-dark !default;
-$default-sublevel-link-color-active: $white !default;
-
-$default-sublevel-bg-color: $white !default;
-$default-sublevel-bg-color-hover: $gray-light !default;
-$default-sublevel-bg-color-active: $yellow !default;
-
-// Keyframes
-
-@if $default-menu-animation == "fadeInUp" {
-    @-webkit-keyframes menuIn {
-        0% {
-            opacity: 0;
-            -webkit-transform: TranslateY(20px);
-            transform: TranslateY(20px);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: TranslateY(0);
-            transform: TranslateY(0);
-        }
-    }
-
-    @keyframes menuIn {
-        0% {
-            opacity: 0;
-            -webkit-transform: TranslateY(20px);
-            -ms-transform: TranslateY(20px);
-            transform: TranslateY(20px);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: TranslateY(0);
-            -ms-transform: TranslateY(0);
-            transform: TranslateY(0);
-        }
-    }
-
-    // Fade out
-    @-webkit-keyframes menuOut {
-        0% {
-            opacity: 1;
-            -webkit-transform: TranslateY(0px);
-            transform: TranslateY(0px);
-        }
-        100% {
-            opacity: 0;
-            -webkit-transform: TranslateY(20px);
-            transform: TranslateY(20px);
-        }
-    }
-
-    @keyframes menuOut {
-        0% {
-            opacity: 1;
-            -webkit-transform: TranslateY(0px);
-            -ms-transform: TranslateY(0px);
-            transform: TranslateY(0px);
-        }
-        100% {
-            opacity: 0;
-            -webkit-transform: TranslateY(20px);
-            -ms-transform: TranslateY(20px);
-            transform: TranslateY(20px);
-        }
-    }
-}
-
-@if $default-menu-animation == "fade" {
-    @-webkit-keyframes menuIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes menuIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    // Fade out
-    @-webkit-keyframes menuOut {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-
-    @keyframes menuOut {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-}
-
-//-- new --
-%menu {
+@mixin menu {
+    // Base
     @extend %reset;
-    @extend %animate;
-    display: inline-block;
-    // Globals
-    & li {
-        @extend %animate;
-        position: relative;
-        & a {
-            @extend %animate;
-            display: block;
-        }
-        &:hover {
-            // Show submenu on hover
-            & > ul {
-                visibility: visible;
-            }
-        }
-    }
-    // Parent only
-    & > li {
+    ul, li {
         @extend %reset;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-        font-family: inherit;
-        & > a {
-            display: block;
-        }
-        // Extra wide menu with sub menus open
-        &.super--dropdown {
-            position: inherit;
-            > ul {
-                clear: both;
-                width: 100%;
-            }
-            ul ul {
-                position: relative;
-                left: 0;
-                width: 100%;
-                -webkit-animation-name: menuIn;
-            }
-            &:hover {
-                // Show submenu on hover
-                & ul {
-                    visibility: visible;
-                }
-            }
-            li {
-                // Parent
-                width: 25%;
-                float: left;
-                & li {
-                    width: 100%;
-                }
-            }
-        }
-        // ---------
-   
     }
-    // Drop Down Menu
-    & ul {
-        @extend %reset;
-        position: absolute;
-        left: 0;
-        z-index: 999;
-        visibility: hidden;
-        // Hide by default
-        & > li {
-            @extend %reset;
-            text-align: left;
-        }
-    }
-    // Subsub
-    & ul ul {
-        top: 0;
-    }
-}
-
-@mixin menu(
-    $menu-height: $default-menu-height,
-    $menu-animation: $default-menu-animation,
-    $toplevel-font-size: $default-toplevel-font-size,
-    $toplevel-padding: $default-toplevel-padding,
-    $toplevel-anim-speed: $default-toplevel-anim-speed,
-    $toplevel-link-color: $default-toplevel-link-color,
-    $toplevel-link-color-hover: $default-toplevel-link-color-hover,
-    $toplevel-link-color-active: $default-toplevel-link-color-active,
-    $toplevel-bg-color: $default-toplevel-bg-color,
-    $toplevel-bg-color-hover: $default-toplevel-bg-color-hover,
-    $toplevel-bg-color-active: $default-toplevel-bg-color-active,
-    $sublevel-font-size: $default-sublevel-font-size,
-    $sublevel-padding: $default-sublevel-padding,
-    $sublevel-width: $default-sublevel-width,
-    $sublevel-anim-speed: $default-sublevel-anim-speed,
-    $sublevel-link-color: $default-sublevel-link-color,
-    $sublevel-link-color-hover: $default-sublevel-link-color-hover,
-    $sublevel-link-color-active: $default-sublevel-link-color-active,
-    $sublevel-bg-color: $default-sublevel-bg-color,
-    $sublevel-bg-color-hover: $default-sublevel-bg-color-hover,
-    $sublevel-bg-color-active: $default-sublevel-bg-color-active
-    ) 
-    {
-    height: $menu-height;
-    // Animation
     & li {
-        transition: all $sublevel-anim-speed;
+        display: block;
+        @include medium {
+            display: inline-block;
+        }
+        @include large {
+            display: inline-block;
+        }
+        position: relative;
+    }
+    & a {
+        display: block;
+        line-height: 60px;
+        color: $base-text-color;
+        text-decoration: none;
+        background-color: $base-background-color;
+        padding: 0em 1em;
         &:hover {
-            > ul {
-                transition: all $sublevel-anim-speed;
-                -webkit-animation-name: menuIn;
-                -webkit-animation-duration: $sublevel-anim-speed;
-                -webkit-animation-delay: 0s;
-                -webkit-animation-timing-function: ease;
-                -webkit-animation-fill-mode: both;
-            }
-        }
-        & ul {
-            -webkit-animation-name: menuOut;
-            -webkit-animation-duration: $sublevel-anim-speed;
-            -webkit-animation-delay: 0s;
-            -webkit-animation-timing-function: ease;
-            -webkit-animation-fill-mode: both;
+            background-color: darken($base-background-color, 5%);
         }
     }
-    & ul {
-        width: $sublevel-width;
-    }
-    // Parent only
-    & > li {
-        height: $menu-height;
-        background-color: $toplevel-bg-color;
-        & > a {
-            @include rem($toplevel-font-size);
-            height: $menu-height;
-            padding: 0 $toplevel-padding;
-            padding: 0 calculateRem($toplevel-padding);
-            line-height: $menu-height;
-            color: $toplevel-link-color;
+    // Sub
+    ul {
+        @include medium {
+            position: absolute;
         }
-        &:hover {
-            background-color: $toplevel-bg-color-hover;
-            & > a {
-                color: $toplevel-link-color-hover;
-            }
+        display: none;
+        top: 60px;
+        min-width: 100%;
+        @include medium {
+            min-width: 220px;
         }
-        &--active {
-            background-color: $toplevel-bg-color-active;
-            & > a {
-                color: $toplevel-link-color-active;
-            }
-        }
-    }
-    // Drop Down Menu
-    & ul {
-        background-color: $sublevel-bg-color;
+        z-index: -1;
+        transition: 0.2s ease-in-out;
         & li {
-            background-color: $sublevel-bg-color;
-            & a {
-                @include rem($sublevel-font-size);
-                padding: $sublevel-padding;
-                padding: calculateRem($sublevel-padding);
-                color: $sublevel-link-color;
-            }
-            &:hover {
-                background-color: $sublevel-bg-color-hover;
-                & > a {
-                    color: $sublevel-link-color-hover;
-                }
-            }
-            &.active {
-                background-color: $sublevel-bg-color-active;
-                & > a {
-                    color: $sublevel-link-color-active;
-                }
-            }
+            display: block;
+        }
+        & a {
+            font-size: 0.9em;
+            line-height: 40px;
+            background-color: darken($base-background-color, 10%);
         }
     }
-    & ul ul {
-        left: $sublevel-width;
+    // Show on hover
+    & li:hover > ul {
+        display: block;
+        z-index: 999;
     }
-    @extend %menu;
 }
 
-
-
-
-
-//-------
+.nav {
+    @include menu;
+}

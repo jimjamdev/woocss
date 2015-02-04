@@ -1,13 +1,13 @@
-$(document).ready(function() {
-  var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass("show");
+$(document).ready(function () {
+    var menuToggle = $('.menu').unbind();
+    $('.menu ul').removeClass("show");
 
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
-      if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
-      }
+    menuToggle.on('click', function (e) {
+        e.preventDefault();
+        $('.menu ul').slideToggle(function () {
+            if ($('.menu ul').is(':hidden')) {
+                $('.menu ul').removeAttr('style');
+            }
+        });
     });
-  });
 });

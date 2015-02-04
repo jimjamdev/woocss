@@ -157,33 +157,40 @@
 // ====================================================
 // Margin ============================================
 // ====================================================
-%margin, .margin {
+%margin,
+.margin {
     margin: $default-padding;
 }
 
-%margin-vertical, .margin--vertical {
+%margin-vertical,
+.margin--vertical {
     margin-top: $default-padding;
     margin-bottom: $default-padding;
 }
 
-%margin-horizontal, .margin--horizontal {
+%margin-horizontal,
+.margin--horizontal {
     margin-left: $default-padding;
     margin-right: $default-padding;
 }
 
-%margin-top, .margin--top {
+%margin-top,
+.margin--top {
     margin-top: $default-padding;
 }
 
-%margin-right, .margin--right {
+%margin-right,
+.margin--right {
     margin-right: $default-padding;
 }
 
-%margin-bottom, .margin--bottom {
+%margin-bottom,
+.margin--bottom {
     margin-bottom: $default-padding;
 }
 
-%margin-left, .margin--left {
+%margin-left,
+.margin--left {
     margin-left: $default-padding;
 }
 
@@ -257,19 +264,19 @@
 // Material Design Shadow =============================
 // ====================================================
 @mixin material-shadow($level: 1) {
-    @if $level= 1 {
+    @if $level 1 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
-    @else if $level= 2 {
+    @else if $level 2 {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
-    @else if $level= 3 {
+    @else if $level 3 {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     }
-    @else if $level= 4 {
+    @else if $level 4 {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
-    @else if $level= 5 {
+    @else if $level 5 {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     }
 }

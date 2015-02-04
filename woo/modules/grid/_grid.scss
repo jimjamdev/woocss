@@ -1,6 +1,30 @@
-.col--4 {
-    @include span(4 of 12);
-    &:nth-child(3n) {
-        @include span(4 of 12 last);
+
+@include xsmall {
+    @for $i from 1 through $grid-columns {
+        .col-xs-#{$i} { @include span($i);  }
     }
 }
+
+@include small {
+    @for $i from 1 through $grid-columns {
+        .col-sm-#{$i} { @include span($i);  }
+    }
+}
+
+@include medium {
+    @for $i from 1 through $grid-columns {
+        .col-md-#{$i} { @include span($i);  }
+    }
+}
+ 
+@include large {
+    @for $i from 1 through $grid-columns {
+        .col-lg-#{$i} { @include span($i);  }
+    }
+}
+
+@include xlarge {
+    @for $i from 1 through $grid-columns {
+        .col-xl-#{$i} { @include span($i);  }
+    }
+} 

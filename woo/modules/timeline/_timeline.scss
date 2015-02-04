@@ -1,1 +1,46 @@
-@mixin timeline {}
+@mixin timeline {
+    @extend %clearfix;
+    header, article {
+        border-right: solid 1px $base-background-color;
+    }
+    & header {
+        background: rgba($base-background-color, 1);
+        padding: 2em 0em;
+    }
+    & article {
+        background: rgba($base-background-color, 0.5);
+    }
+    // Main content
+    &__level {
+        font-size: 0.8em;
+        color: set-color($base-background-color); 
+    }
+    &__title {
+        font-size: 2em;
+    }
+    &__sub-title {
+        font-size: 1em;
+    }
+    &__date {
+        border-bottom: solid 1px $gray;
+        padding: 1em 0em;
+    }
+    // Line with dot
+    &__line {
+        position: relative;
+        display: block;
+        height: 1px;
+        background-color: set-color($base-background-color);
+        &__dot {
+            position: absolute;
+            margin: 0 auto;
+            top: -5px;
+            left: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: set-color($base-background-color);
+            border-radius: 50%;
+        }
+    }
+}

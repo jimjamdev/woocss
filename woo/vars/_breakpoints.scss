@@ -1,17 +1,18 @@
 // New susy libsass grid
-
+$device-xsmall: 0em 30em;
 // Mobile only
 $device-small: 0em 40em;
-
 // Tablet
 $device-medium: 40.063em;
-
 // Desktop
 $device-large: 64em;
-
 // Large Desktop
 $device-xlarge: 90em;
-
+@mixin xsmall {
+    @include susy-media($device-xsmall) {
+        @content;
+    }
+}
 
 @mixin small {
     @include susy-media($device-small) {
@@ -23,17 +24,19 @@ $device-xlarge: 90em;
     @include susy-media($device-medium) {
         @content;
     }
+    .lt-ie8 & {
+        @content;
+        // We want to show this for the older IE8 browser that doesnt support media queries.
+    }
 }
 
 @mixin large {
     @include susy-media($device-large) {
         @content;
     }
-
-    .oldie & {
+    .lt-ie8 & {
         @content;
         // We want to show this for the older IE8 browser that doesnt support media queries.
-   
     }
 }
 
