@@ -1,5 +1,4 @@
 @import "../../../sass-mediaqueries/media-queries";
-// New susy libsass grid
 // Mobile only
 $device-small: 40em;
 // Tablet
@@ -8,6 +7,7 @@ $device-medium: 40.063em;
 $device-large: 64em;
 // Large Desktop
 $device-xlarge: 90em;
+// Mixins
 @mixin xsmall {
     @include max-screen($device-small) {
         @content;
@@ -26,17 +26,14 @@ $device-xlarge: 90em;
     }
     .lt-ie8 & {
         @content;
-        // We want to show this for the older IE8 browser that doesnt support media queries.
+        // We want to show this for the older IE8 browser that doesnt support media queries. This way we can get rid of respond.js and still give older IE users and fast and pleasant experience.
+        // We can also use the .lt-ieX tags to target older version of IE without Modernizr. Thats a saving of over 100k. 
     }
 }
 
 @mixin large {
     @include min-screen($device-large) {
         @content;
-    }
-    .lt-ie8 & {
-        @content;
-        // We want to show this for the older IE8 browser that doesnt support media queries.
     }
 }
 

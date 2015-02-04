@@ -18,13 +18,14 @@ Installation instructions for woocss base framework.
 1. Install NodeJs (http://nodejs.org/)
 2. Install sass (http://sass-lang.com/install)
 3. npm install -g bower
-4. In console, run "nmp install then bower install".
-5. In console, run "grunt watch".
+4. In console, run "nmp install" then "bower install".
+5. In console, run "gulp watch".
 
 Enjoy!
 
 == Notes ===============================================================
 
 Generate your 260x260 icon file for img/ico at http://realfavicongenerator.net/.
+Gulp file is still in dev mode, you might need to tweak.
 
 
