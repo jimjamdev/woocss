@@ -4,18 +4,23 @@
     @extend %base-border;
     @extend %base-border-radius;
     margin: $default-margin 0;
-    
+    @include ipad-retina {
+        font-size: 2em;
+    }
 }
+
 .alert--warning {
     @extend .alert;
     background-color: $warning;
     color: set-color($warning);
 }
+
 .alert--danger {
     @extend .alert;
     background-color: $danger;
     color: set-color($danger);
 }
+
 .alert--success {
     @extend .alert;
     background-color: $success;

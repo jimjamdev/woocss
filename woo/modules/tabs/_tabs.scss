@@ -1,4 +1,5 @@
-$tab-text-color-active: darken($gray, 60%) !default;
+$tab-text-color-active: darken($gray,
+60%) !default;
 .tabs {
     margin: 0;
     padding: 0;
@@ -23,15 +24,13 @@ $tab-text-color-active: darken($gray, 60%) !default;
             display: inline-block;
         }
         @extend %padding;
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
         @extend %base-body-background;
         @extend %base-border;
         border-bottom-color: $gray;
         margin-bottom: -1px;
         &.active {
             @extend %base-text-color;
-            @extend %base-background;
+            @extend %base-background; 
         }
     }
     .tab-content {
@@ -40,8 +39,6 @@ $tab-text-color-active: darken($gray, 60%) !default;
         float: left;
         display: none;
         @extend %base-border;
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
         .active {
             display: block;
         }

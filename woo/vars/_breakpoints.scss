@@ -1,3 +1,4 @@
+@import "../../../sass-mediaqueries/media-queries";
 // New susy libsass grid
 $device-xsmall: 0em 30em;
 // Mobile only
@@ -9,19 +10,19 @@ $device-large: 64em;
 // Large Desktop
 $device-xlarge: 90em;
 @mixin xsmall {
-    @include susy-media($device-xsmall) {
+    @include max-screen($device-xsmall) {
         @content;
     }
 }
 
 @mixin small {
-    @include susy-media($device-small) {
+    @include min-screen($device-small) {
         @content;
     }
 }
 
 @mixin medium {
-    @include susy-media($device-medium) {
+    @include min-screen($device-medium) {
         @content;
     }
     .lt-ie8 & {
@@ -31,7 +32,7 @@ $device-xlarge: 90em;
 }
 
 @mixin large {
-    @include susy-media($device-large) {
+    @include min-screen($device-large) {
         @content;
     }
     .lt-ie8 & {
@@ -41,7 +42,7 @@ $device-xlarge: 90em;
 }
 
 @mixin xlarge {
-    @include susy-media($device-xlarge) {
+    @include min-screen($device-xlarge) {
         @content;
     }
 }

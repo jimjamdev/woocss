@@ -1,8 +1,8 @@
 $header-default-height: 60px !default;
-$offcanvas-sidebar-width: 20em !default;
+$offcanvas-sidebar-width: 17em !default;
 $offcanvas-background-color: $base-background-color !default;
-
-body, html {
+body,
+html {
     @extend %full-height;
 }
 
@@ -19,7 +19,6 @@ body, html {
 // ================================
 // Off Canvas Menus
 // ================================
-
 %offcanvas-default {
     @extend %full-height;
     position: fixed;
@@ -73,7 +72,6 @@ body, html {
         transition: bottom 0.2s ease-in;
     }
 }
-
 /*.offcanvas header.header {
     position: absolute;
     top: 0;
@@ -91,7 +89,6 @@ body, html {
 // ================================
 // ACTIVE Body > Menus
 // ================================
-
 // LEFT
 .js-opencanvas-left {
     overflow: hidden;
@@ -121,7 +118,6 @@ body, html {
 }
 
 // TOP
-
 .js-opencanvas-top {
     overflow: hidden;
     // Menu
@@ -131,7 +127,6 @@ body, html {
 }
 
 // BOTTOM
-
 .js-opencanvas-bottom {
     overflow: hidden;
     // Menu

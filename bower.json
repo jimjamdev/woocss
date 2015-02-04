@@ -25,8 +25,9 @@
         "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
         "susy": "https://github.com/ericam/susy.git",
         "compass-libsass": "https://github.com/jimmyjamieson/compass-libsass.git",
+        "sass-mediaqueries": "https://github.com/paranoida/sass-mediaqueries.git",
         "slick": "https://github.com/kenwheeler/slick.git",
         "magnific-popup": "~0.9.9",
         "lazyloadxt": "~1.0.5"
-    },
+    }
 }

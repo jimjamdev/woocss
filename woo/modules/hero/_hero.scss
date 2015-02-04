@@ -2,8 +2,9 @@
     @extend %default-background-image;
     background-color: $base-background-color;
     text-align: center;
-    font-size: 3em;
-    color: black;
+    font-size: 5em;
+    color: white;
+    font-weight: 100; 
     @include centered(".hero__content");
     min-height: 300px;
     &--short {

@@ -14,7 +14,7 @@
             display: block;
             text-decoration: none;
             color: black;
-            padding: 13px 0px 13px 13px;
+            padding: 13px 13px 13px 0px;
         }
     }
     &__nav {
@@ -22,7 +22,7 @@
         width: 83%;
         float: right;
         .nav {
-            float:right;
+            float: right;
             @include small {
                 display: none;
             }

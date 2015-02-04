@@ -9,11 +9,11 @@
     }
     & article {
         background: rgba($base-background-color, 0.5);
-    }
+    } 
     // Main content
     &__level {
         font-size: 0.8em;
-        color: set-color($base-background-color); 
+        color: set-color($base-background-color);
     }
     &__title {
         font-size: 2em;
