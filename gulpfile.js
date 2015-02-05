@@ -146,12 +146,15 @@ gulp.task('svg', function () {
 
 
 gulp.task('images', ['svg'], function () {
-    return gulp.src('app/images/**/*')
+    return gulp.src('app/**/*')
+        .pipe($.filter('**/*.{jpg,jpeg,png,gif,svg}'))
+        .pipe($.flatten())
         /*.pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
             interlaced: true
         })))*/
+        .pipe(gulp.dest('app/images'))
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
 });
