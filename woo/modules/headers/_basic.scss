@@ -24,7 +24,7 @@
         .nav {
             float: right;
             @include xsmall {
-                display: none; 
+                display: none;
             }
         }
         .nav__mobile {

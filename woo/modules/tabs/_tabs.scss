@@ -30,7 +30,7 @@ $tab-text-color-active: darken($gray,
         margin-bottom: -1px;
         &.active {
             @extend %base-text-color;
-            @extend %base-background; 
+            @extend %base-background;
         }
     }
     .tab-content {

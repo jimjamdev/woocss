@@ -1,14 +1,12 @@
 // ====================================================
 // Default Font Settings ==============================
 // ====================================================
-
 @include establish-baseline;
-
 // ====================================================
 // Default Font Sizes ==============================
 // ====================================================
-
-html, body {
+html,
+body {
     font-family: $base-font-family;
     color: $base-font-color;
     font-weight: $base-font-weight;
@@ -18,7 +16,12 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: $base-font-weight;
 }
 
