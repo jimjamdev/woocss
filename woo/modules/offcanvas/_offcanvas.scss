@@ -3,74 +3,66 @@ $offcanvas-sidebar-width: 17em !default;
 $offcanvas-background-color: $base-background-color !default;
 body,
 html {
-    @extend %full-height;
+  @extend %full-height;
 }
-
 .main {
-    @extend %full-height;
-    display: block;
-    width: 100%;
+  @extend %full-height;
+  display: block;
+  width: 100%;
 }
-
 .slide {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
-
 // ================================
 // Off Canvas Menus
 // ================================
 %offcanvas-default {
-    @extend %full-height;
-    position: fixed;
-    top: 0;
-    background: $offcanvas-background-color;
-    z-index: -1;
+  @extend %full-height;
+  position: fixed;
+  top: 0;
+  background: $offcanvas-background-color;
+  z-index: -1;
 }
-
 .offcanvas {
-    //Left
-    &__left {
-        @extend %offcanvas-default;
-        right: auto;
-        z-index: 10;
-        box-shadow: 1px 0px 3px rgba($black, 0.2);
-        width: $offcanvas-sidebar-width;
-        transform: translate3d(-100%, 0, 0);
-        transition: transform 0.3s ease-in-out;
-    }
-    //Right
-    &__right {
-        @extend %offcanvas-default;
-        left: auto;
-        right: 0;
-        z-index: 10;
-        box-shadow: -1px 0px 3px rgba($black, 0.2);
-        width: $offcanvas-sidebar-width;
-        transform: translate3d(100%, 0, 0);
-        transition: transform 0.3s ease-in-out;
-    }
-    //Top
-    &__top {
-        @extend %offcanvas-default;
-        left: 0;
-        right: 0;
-        position: fixed;
-        top: -100%;
-        z-index: 9999;
-        overflow: hidden;
-        transition: top 0.2s ease-in;
-    }
-    //Bottom
-    &__bottom {
-        @extend %offcanvas-default;
-        top: auto;
-        bottom: -100%;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        overflow: hidden;
-        transition: bottom 0.2s ease-in;
-    }
+  //Left
+  &__left {
+    @extend %offcanvas-default;
+    right: auto;
+    box-shadow: 1px 0 3px rgba($black, 0.2);
+    width: $offcanvas-sidebar-width;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s ease-in-out;
+  }
+  //Right
+  &__right {
+    @extend %offcanvas-default;
+    left: auto;
+    right: 0;
+    box-shadow: -1px 0 3px rgba($black, 0.2);
+    width: $offcanvas-sidebar-width;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.3s ease-in-out;
+  }
+  //Top
+  &__top {
+    @extend %offcanvas-default;
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: -100%;
+    overflow: hidden;
+    transition: top 0.2s ease-in;
+  }
+  //Bottom
+  &__bottom {
+    @extend %offcanvas-default;
+    top: auto;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    transition: bottom 0.2s ease-in;
+  }
 }
 /*.offcanvas header.header {
     position: absolute;
@@ -85,52 +77,51 @@ html {
     overflow-y: auto;
     height: 100%;
 }*/
-
 // ================================
 // ACTIVE Body > Menus
 // ================================
 // LEFT
 .js-opencanvas-left {
-    overflow: hidden;
-    // Menu
-    & .offcanvas__left {
-        transform: translate3d(0, 0, 0);
-    }
-    // Canvas
-    & .slide {
-        transform: translate3d($offcanvas-sidebar-width, 0, 0);
-    }
+  overflow: hidden;
+  // Menu
+  & .offcanvas__left {
+    z-index: 10;
+    transform: translate3d(0, 0, 0);
+  }
+  // Canvas
+  & .slide {
+    transform: translate3d($offcanvas-sidebar-width, 0, 0);
+  }
 }
-
 // RIGHT
 .js-opencanvas-right {
-    overflow: hidden;
-    // Menu
-    & .offcanvas__right {
-        right: 0;
-        z-index: 10;
-        transform: translate3d(0, 0, 0);
-    }
-    // Canvas
-    & .slide {
-        transform: translate3d(-$offcanvas-sidebar-width, 0, 0);
-    }
+  overflow: hidden;
+  // Menu
+  & .offcanvas__right {
+    right: 0;
+    z-index: 10;
+    transform: translate3d(0, 0, 0);
+  }
+  // Canvas
+  & .slide {
+    transform: translate3d(-$offcanvas-sidebar-width, 0, 0);
+  }
 }
-
 // TOP
 .js-opencanvas-top {
-    overflow: hidden;
-    // Menu
-    & .offcanvas__top {
-        top: 0%;
-    }
+  overflow: hidden;
+  // Menu
+  & .offcanvas__top {
+    z-index: 10;
+    top: 0;
+  }
 }
-
 // BOTTOM
 .js-opencanvas-bottom {
-    overflow: hidden;
-    // Menu
-    & .offcanvas__bottom {
-        bottom: 0em;
-    }
+  overflow: hidden;
+  // Menu
+  & .offcanvas__bottom {
+    z-index: 10;
+    bottom: 0;
+  }
 }
