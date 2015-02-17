@@ -27,10 +27,14 @@
     }
     // Sub
     ul {
+        &.reverse--position {
+          right:0;
+        }
         @include medium {
             position: absolute;
         }
         display: none;
+        left:0;
         top: 60px;
         min-width: 100%;
         @include medium {
