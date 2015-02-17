@@ -19,8 +19,8 @@
     "tests"
   ],
     "dependencies": {
-        "jquery-legacy": "jquery#1.11.1",
-        "jquery-latest": "jquery#2.1.1",
+        "jquery-legacy": "jquery#1.11.2",
+        "jquery-latest": "jquery#2.1.3",
         "sassanimation": "https://github.com/jimmyjamieson/sassanimation.git",
         "modular-scale": "https://github.com/Team-Sass/modular-scale.git",
         "susy": "https://github.com/ericam/susy.git",
