@@ -29,6 +29,7 @@
     ul {
         &.reverse--position {
           right:0;
+          left:auto;
         }
         @include medium {
             position: absolute;
