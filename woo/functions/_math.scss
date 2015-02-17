@@ -7,7 +7,7 @@
     @return #{$remSize}rem;
 }
 
-@mixin font-size-rem($size) {
+@mixin font-rem($size) {
   font-size: $size; //Fallback in px
   font-size: calcRem($size);
 }
