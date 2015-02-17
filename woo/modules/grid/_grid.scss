@@ -1,4 +1,4 @@
-
+@mixin float-grid {
 @include xsmall {
     @for $i from 1 through $grid-columns {
         .col-xs-#{$i} { @include span($i);  }
@@ -16,7 +16,7 @@
         .col-md-#{$i} { @include span($i);  }
     }
 }
- 
+
 @include large {
     @for $i from 1 through $grid-columns {
         .col-lg-#{$i} { @include span($i);  }
@@ -27,4 +27,5 @@
     @for $i from 1 through $grid-columns {
         .col-xl-#{$i} { @include span($i);  }
     }
-} 
+}
+}
