@@ -1,42 +1,45 @@
-.header {
+@mixin header-basic {
+  .header {
     display: block;
     background-color: $gray;
     // Icons
-    [class^="icon-"], [class*=" icon-"] {
-        font-size: 2em;
+    [class^="icon-"],
+    [class*=" icon-"] {
+      font-size: 2em;
     }
     &__logo {
-        display: inline-block;
-        width: 15%;
-        float: left;
-        // Size
-        & a {
-            display: block;
-            text-decoration: none;
-            color: black;
-            padding: 13px 13px 13px 0px;
-        }
+      display: inline-block;
+      width: 15%;
+      float: left;
+      // Size
+      & a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 13px 13px 13px 0;
+      }
     }
     &__nav {
-        display: inline-block;
-        width: 83%;
+      display: inline-block;
+      width: 83%;
+      float: right;
+      .nav {
         float: right;
-        .nav {
-            float: right;
-            @include xsmall {
-                display: none;
-            }
+        @include xsmall {
+          display: none;
         }
-        .nav__mobile {
-            @include medium {
-                display: none;
-            }
-            text-align: right;
-            i {
-                display: block;
-                padding: 13px 0px 13px 13px;
-                cursor: pointer;
-            }
+      }
+      .nav__mobile {
+        @include medium {
+          display: none;
         }
+        text-align: right;
+        i {
+          display: block;
+          padding: 13px 0 13px 13px;
+          cursor: pointer;
+        }
+      }
     }
+  }
 }
