@@ -52,6 +52,12 @@
             background-color: darken($base-background-color, 10%);
         }
     }
+    // Sub sub
+    ul ul {
+      @include medium {
+        position: absolute;
+    }
+    }
     // Show on hover
     & li:hover > ul {
         display: block;

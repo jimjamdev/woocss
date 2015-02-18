@@ -1,12 +1,12 @@
 @import "../../../sass-mediaqueries/media-queries";
 // Mobile only
-$device-small: 40em;
+$device-small: 40em !default;
 // Tablet
-$device-medium: 40.063em;
+$device-medium: 40.063em !default;
 // Desktop
-$device-large: 64em;
+$device-large: 64em !default;
 // Large Desktop
-$device-xlarge: 90em;
+$device-xlarge: 90em !default;
 // Mixins
 @mixin xsmall {
     @include max-screen($device-small) {
@@ -24,10 +24,10 @@ $device-xlarge: 90em;
     @include min-screen($device-medium) {
         @content;
     }
-    .lt-ie8 & {
+    .lt-ie9 & {
         @content;
-        // We want to show this for the older IE8 browser that doesnt support media queries. This way we can get rid of respond.js and still give older IE users and fast and pleasant experience.
-        // We can also use the .lt-ieX tags to target older version of IE without Modernizr. Thats a saving of over 100k. 
+        // We want to show this for the older IE8 browser that doesnt support media queries. This way we can get rid of respond.js and still give older IE users a fast and pleasant experience.
+        // We can also use the .lt-ieX tags to target older version of IE without Modernizr. Thats a saving of over 100k.
     }
 }
 
