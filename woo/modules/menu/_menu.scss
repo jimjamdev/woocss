@@ -52,8 +52,9 @@
             background-color: darken($base-background-color, 10%);
             [class^="icon-"],
             [class*=" icon-"],
-            span {
+            span, i {
                 display: inline-block;
+                font-style: normal;
             }
         }
     }
