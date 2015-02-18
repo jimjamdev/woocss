@@ -2,7 +2,7 @@
 
    'use strict';
 
-   $('.owl-carousel').each(function() {
+   $('.carousel').each(function() {
        var $ele = $(this),
            itemCount = $ele.data('items'),
            useNav = $ele.data('nav') !== undefined ? $ele.data('nav') : true,
@@ -21,8 +21,8 @@
        if (itemCount !== undefined) {
            options.items = $.isArray(itemCount) ? itemCount[4] : itemCount
            options.responsive = {
-               480:{
-                   items: $.isArray(itemCount) ? itemCount[0] : 2
+               0:{
+                   items: $.isArray(itemCount) ? itemCount[0] : 1
                },
                678:{
                    items: $.isArray(itemCount) ? itemCount[1] : 4
