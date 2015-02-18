@@ -1,7 +1,7 @@
 @import "type/type";
 @import "buttons/buttons";
 @import "shapes/shapes";
-//@import "carousel/carousel";
+@import "carousel/carousel";
 @import "offcanvas/offcanvas";
 @import "headers/headers";
 @import "alerts/alerts";
@@ -19,6 +19,5 @@
 @import "tooltip/tooltip";
 @import "modal/modal";
 @import "timeline/timeline";
-@import "slick/slick";
-// Helpers 
+// Helpers
 @import "helpers/helpers";
