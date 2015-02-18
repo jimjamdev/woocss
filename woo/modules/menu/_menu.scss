@@ -51,6 +51,10 @@
             line-height: 40px;
             background-color: darken($base-background-color, 10%);
         }
+        [class^="icon-"],
+        [class*=" icon-"], span {
+            display: inline-block;
+        }
     }
     // Sub sub
     ul ul {
