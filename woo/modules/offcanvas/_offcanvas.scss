@@ -20,7 +20,7 @@ html {
   @extend %full-height;
   position: fixed;
   top: 0;
-  background: $offcanvas-background-color;
+  background: $offcanvas-background-color; 
   z-index: -1;
 }
 .offcanvas {
