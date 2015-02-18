@@ -6,7 +6,7 @@
        var $ele = $(this),
            itemCount = $ele.data('items'),
            useNav = $ele.data('nav') !== undefined ? $ele.data('nav') : true,
-           useAutoWidth = $ele.data('auto-width') !== undefined ? $ele.data('auto-width') : true,
+           useAutoWidth = $ele.data('auto-width') !== undefined ? $ele.data('auto-width') : false,
            margin = $ele.data('margin') !== undefined ? $ele.data('margin') : null,
            options = {
                dots: useNav,
