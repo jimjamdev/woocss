@@ -20,15 +20,15 @@
        }
 
        if (itemCount !== undefined) {
-           options.items = $.isArray(itemCount) ? itemCount[4] : itemCount
+           options.items = $.isArray(itemCount) ? itemCount[3] : itemCount
            options.responsive = {
                0:{
                    items: $.isArray(itemCount) ? itemCount[0] : 1
                },
-               678:{
+               740:{
                    items: $.isArray(itemCount) ? itemCount[1] : 2
                },
-               960:{
+               1025:{
                    items: $.isArray(itemCount) ? itemCount[3] : itemCount
                }
            };
