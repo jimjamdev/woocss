@@ -1,4 +1,9 @@
-@mixin menu {
+$default-menu-bg: $base-background-color;
+$default-menu-bg-hover: darken($base-background-color, 5%);
+$default-menu-text: $base-text-color;
+$default-menu-text-hover: darken($base-text-color, 10%);
+
+@mixin menu($bg: $default-menu-bg, $bg-hover: $default-menu-bg-hover, $text: $default-menu-text, $text-hover: $default-menu-text-hover) {
     // Base
     @extend %reset;
     ul, li {
@@ -17,12 +22,12 @@
     & a {
         display: block;
         line-height: 60px;
-        color: $base-text-color;
+        color: $text;
         text-decoration: none;
-        background-color: $base-background-color;
+        background-color: $bg;
         padding: 0em 1em;
         &:hover {
-            background-color: darken($base-background-color, 5%);
+            background-color: $bg-hover;
         }
     }
     // Sub
@@ -49,7 +54,7 @@
         & a {
             font-size: 0.9em;
             line-height: 40px;
-            background-color: darken($base-background-color, 10%);
+            background-color: $bg;
             [class^="icon-"],
             [class*=" icon-"],
             span, i {
