@@ -77,7 +77,3 @@ $default-menu-text-hover: darken($base-text-color, 10%);
         z-index: 999;
     }
 }
-
-.nav {
-    @include menu;
-}
