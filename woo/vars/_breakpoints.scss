@@ -1,5 +1,6 @@
 @import "../../../sass-mediaqueries/media-queries";
 // Mobile only
+$device-xsmall: 30em !default;
 $device-small: 40em !default;
 // Tablet
 $device-medium: 40.063em !default;
@@ -8,14 +9,29 @@ $device-large: 65em !default;
 // Large Desktop
 $device-xlarge: 90em !default;
 // Mixins
+
+
+
 @mixin xsmall {
-    @include max-screen($device-small) {
+    @include min-screen($device-xsmall) {
+        @content;
+    }
+}
+
+@mixin xsmall-only {
+    @include max-screen($device-xsmall) {
         @content;
     }
 }
 
 @mixin small {
     @include min-screen($device-small) {
+        @content;
+    }
+}
+
+@mixin small-only {
+    @include max-screen($device-small) {
         @content;
     }
 }
@@ -42,3 +58,4 @@ $device-xlarge: 90em !default;
         @content;
     }
 }
+ 
