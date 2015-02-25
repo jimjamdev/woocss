@@ -58,4 +58,10 @@ $device-xlarge: 90em !default;
         @content;
     }
 }
+
+@mixin retina {
+    @media (min-device-pixel-ratio:1.3) {
+        @content;
+    }
+}
  
